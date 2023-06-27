@@ -1,0 +1,57 @@
+@import "guildline";
+
+#marquee {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 1px 2px $neutral-gray-200;
+
+  .container {
+    display: flex;
+    // 每 0.1s 往左移動 10px = 1s 移動 100px
+    // = 從 100% 跑到 0% (1440px) 需要 14.4s
+
+    &:first-child {
+      animation: marquee_first 50s linear infinite;
+    }
+
+    &:nth-child(2) {
+      animation: marquee_second 50s linear infinite;
+      animation-delay: -25s;
+    }
+
+    @keyframes marquee_first {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes marquee_second {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+
+    .marquee_item {
+      margin-left: 32px;
+      width: fit-content;
+      font-size: $font-size-body-16;
+      white-space: nowrap;
+    }
+  }
+}

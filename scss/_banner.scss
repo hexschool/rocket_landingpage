@@ -1,0 +1,233 @@
+@import "guildline";
+
+#banner {
+  background: url("../image/banner/banner-bg.png") repeat top center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .banner_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 127px;
+    padding-bottom: 182px;
+
+    @include mobile() {
+      flex-direction: column;
+      padding-top: 60px;
+      padding-bottom: 88px;
+      height: 462px;
+    }
+  }
+
+  .deco_cross {
+    font-size: 48px;
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  .enter_card {
+    display: block;
+    position: relative;
+    width: 40%;
+    height: 448px;
+    border: 2px solid $neutral-gray-300;
+    border-radius: 24px;
+    background-color: #fff;
+    transition: 0.5s;
+
+    @include mobile() {
+      width: 294px;
+      height: 134px;
+      margin-left: -32px; //為了平衡右邊偽元素
+      transition: 0s;
+
+      &:last-child {
+        margin-top: 46px;
+      }
+    }
+
+    //enter_card 滑鼠移過
+    &:hover {
+      margin-top: -16px;
+
+      .card_container,
+      .shape,
+      .enter_btn {
+        filter: opacity(1);
+      }
+
+      @include mobile() {
+        margin-top: 0;
+      }
+    }
+
+    //enter_card 被點擊、在該頁面
+    &:active,
+    &.active {
+      margin-top: 0;
+      box-shadow: 8px 8px 0 $primary-blue-200;
+      transition: 0s;
+
+      .card_container,
+      .shape,
+      .enter_btn {
+        filter: opacity(1);
+      }
+
+      //黏在 enter_card 上的活潑小尖角
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 42px;
+        width: 42px;
+        transform: translate(100%, -100%);
+        background: url("../image/banner/ic-highlight-rocket-lg-.png") center
+          center;
+
+        @include mobile() {
+          right: auto;
+          left: 0;
+          transform: translate(-50%, -50%);
+          background-image: url("../image/banner/ic-highlight-rocket-sm-.png");
+        }
+      }
+    }
+
+    .card_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      filter: opacity(0.5);
+
+      @include mobile() {
+        height: 100%;
+        flex-direction: row;
+        margin-right: -28px;
+      }
+
+      .card_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -36px;
+
+        @include mobile() {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 0;
+          padding: 24px 0 24px 24px;
+        }
+
+        .card_title_tw {
+          font-size: 48px;
+          line-height: normal;
+          height: 72px;
+
+          @include mobile() {
+            font-size: 32px;
+            height: auto;
+          }
+        }
+
+        .card_title_en {
+          color: $neutral-gray-500;
+          font-size: $font-size-body-24;
+
+          @include mobile() {
+            width: 100%;
+            margin-top: 8px;
+            font-size: $font-size-body-20;
+          }
+        }
+
+        .card_img {
+          width: 124px;
+          margin-top: 24px;
+
+          @include mobile() {
+            width: 48px;
+            order: -1;
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+
+      .hashtag {
+        text-align: center;
+        margin-top: 16px;
+
+        @include mobile() {
+          display: none;
+        }
+
+        li {
+          line-height: 35px;
+          list-style: none;
+        }
+      }
+    }
+
+    .enter_btn {
+      position: absolute;
+      z-index: 1;
+      bottom: -62px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 120px;
+      height: 143px;
+      background: url("../image/banner/banner-btn-rocket-lg.png") no-repeat
+        center center;
+      filter: opacity(0.8);
+
+      @include mobile() {
+        width: 72px;
+        height: 80px;
+        bottom: 50%;
+        left: auto;
+        right: -4px;
+        transform: translate(50%, 50%);
+        background: url("../image/banner/banner-btn-rocket-sm.png") no-repeat
+          center center;
+      }
+    }
+  }
+
+  //更換共同空間卡片的顏色和圖案
+  .enter_card.space {
+    .shape {
+      background-color: $primary-violet-200;
+    }
+
+    .enter_btn {
+      background-image: url("../image/banner/banner-btn-coworking-lg.png");
+
+      @include mobile() {
+        background-image: url("../image/banner/banner-btn-coworking-sm.png");
+      }
+    }
+
+    &:active,
+    &.active {
+      box-shadow: 8px 8px 0 $primary-violet-200;
+      &::after {
+        background-image: url("../image/banner/ic-highlight-coworking-lg-.png");
+
+        @include mobile() {
+          background-image: url("../image/banner/ic-highlight-coworking-sm-.png");
+        }
+      }
+    }
+  }
+}

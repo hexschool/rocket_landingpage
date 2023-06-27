@@ -1,0 +1,60 @@
+// Bootcamp Rocket
+$primary-blue-100: #e6ebff;
+$primary-blue-200: #bfc9f0;
+$primary-blue-300: #a6b6f1;
+$primary-blue-400: #7f94e2;
+$accent-yellow: #ffeea3;
+
+// Co-working Space
+$primary-violet-100: #f5f1ff;
+$primary-violet-200: #eee5ff;
+$primary-violet-300: #cab2f1;
+$primary-violet-400: #b28fea;
+$accent-orange: #ffd887;
+
+// Neutral
+$neutral-gray-100: #f8f9fd;
+$neutral-gray-200: #f0f0f0;
+$neutral-gray-300: #e0e0e0;
+$neutral-gray-400: #cdcdcd;
+$neutral-gray-500: #9a9a9a;
+$neutral-gray-600: #757575;
+$neutral-gray-700: #363636;
+
+$font-size-body-24: 24px;
+$font-size-body-20: 20px;
+$font-size-body-18: 18px;
+$font-size-body-16: 16px;
+$font-size-body-14: 14px;
+
+//---
+
+@mixin large_desktop {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin padding-y-48 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+@mixin scrollbar_none {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

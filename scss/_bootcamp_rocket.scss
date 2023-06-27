@@ -1,0 +1,800 @@
+@import "guildline";
+
+.rocket_page .mark_style {
+  font-weight: 700;
+  background-image: linear-gradient(transparent 50%, $accent-yellow 50%);
+}
+
+#about_rocket {
+  margin-top: -22px;
+  background-color: $primary-blue-100;
+  border-radius: 40px;
+
+  &:target {
+    scroll-margin-top: 64px;
+  }
+
+  @include large_desktop() {
+    border-radius: 0;
+  }
+
+  @include tablet() {
+    margin-top: -28px;
+    border-radius: 24px;
+  }
+
+  .about_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 32px;
+
+    @include tablet() {
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }
+
+  .summary {
+    width: 40%;
+
+    @include tablet() {
+      width: 100%;
+    }
+  }
+  .summary_title_en {
+    font-size: $font-size-body-20;
+
+    @include tablet() {
+      font-size: $font-size-body-16;
+    }
+  }
+
+  .summary_title_en ~ p {
+    margin-top: 40px;
+
+    @include tablet() {
+      margin-top: 16px;
+    }
+  }
+  .summary_description {
+    font-size: $font-size-body-20;
+    font-weight: 500;
+
+    @include tablet() {
+      font-size: $font-size-body-16;
+    }
+  }
+
+  .card_container_outside {
+    width: 50%;
+
+    @include tablet() {
+      width: 100%;
+    }
+  }
+  .card_container {
+    width: 100%;
+    height: 592px;
+    overflow-y: scroll;
+    overflow-x: visible;
+    gap: 32px 0;
+
+    @include scrollbar_none();
+
+    @include tablet() {
+      height: 100%;
+      overflow: visible;
+    }
+  }
+  .career_card {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding: 36px;
+    border-radius: 24px;
+    list-style: none;
+
+    @include tablet() {
+      align-items: start;
+    }
+
+    @include mobile() {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 16px 20px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:first-child img {
+      margin-left: -51px;
+
+      @include mobile() {
+        margin-top: -116px;
+        margin-left: 0px;
+      }
+    }
+
+    &:nth-of-type(2) img {
+      margin-left: -63px;
+
+      @include mobile() {
+        margin-top: -116px;
+        margin-left: 0px;
+      }
+    }
+
+    &:nth-of-type(3) img {
+      margin-left: -59px;
+
+      @include mobile() {
+        margin-top: -116px;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .career_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+
+    @include tablet() {
+      width: 100%;
+      height: 120px;
+    }
+  }
+  .skills {
+    display: flex;
+    margin-top: 12px;
+
+    @include tablet() {
+      margin-top: 8px;
+    }
+
+    li {
+      width: fit-content;
+      padding: 8px 12px;
+      margin-left: 12px;
+      border: 2px solid $primary-blue-400;
+      border-radius: 999px;
+      color: $primary-blue-400;
+      list-style: none;
+      line-height: normal;
+      font-size: $font-size-body-16;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @include tablet() {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .title_en {
+    color: $neutral-gray-500;
+    font-size: $font-size-body-24;
+    margin-top: 72px;
+
+    @include mobile() {
+      font-size: $font-size-body-20;
+      margin-top: 12px;
+    }
+  }
+
+  .career_img {
+    display: block;
+    width: 169px;
+    height: 208px;
+    border-radius: 24px;
+    background-color: $neutral-gray-200;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    @include tablet() {
+    }
+    @include mobile() {
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      border-radius: 12px;
+      margin-top: 136px;
+    }
+
+    img {
+      height: 160px;
+    }
+  }
+}
+
+#success_case {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  .case_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 92px;
+    padding-bottom: 120px;
+    width: 100%;
+
+    @include mobile() {
+      padding-top: 48px;
+      padding-bottom: 92px;
+    }
+  }
+
+  .case_card_container {
+    width: 100%;
+    // margin: 0 72px;
+    margin-top: 28px;
+
+    @include mobile() {
+      width: 100%;
+      // margin: 0 48px;
+      margin-top: 16px;
+    }
+  }
+
+  li {
+    list-style: none;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+}
+
+#training {
+  background-color: $neutral-gray-100;
+  font-size: $font-size-body-16;
+
+  .training_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile() {
+      // max-width: 1281px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    h2 {
+      margin-top: -28px;
+
+      @include mobile() {
+        margin-top: -20px;
+      }
+    }
+  }
+  //近期梯次
+  .new_batch {
+    margin: 0;
+    padding: 12px 20px;
+    margin-top: 12px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #e8e8e8;
+    display: flex;
+
+    @include mobile() {
+      max-width: 332px;
+      width: 100%;
+      margin-top: 8px;
+      font-size: $font-size-body-14;
+    }
+  }
+  .new_batch_title {
+    width: fit-content;
+    padding: 5px 11px 5px 0;
+    margin-right: 11px;
+    border-right: 2px solid $neutral-gray-200;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  .new_batch_ticker {
+    padding: 5px 0;
+    font-weight: 500;
+    overflow: hidden;
+
+    @include mobile() {
+      min-width: 210px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden; //之後要加動畫
+      display: flex;
+    }
+  }
+  .new_batch_ticker_text {
+    font-weight: 500;
+    line-height: normal;
+    white-space: nowrap;
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    @include mobile() {
+      height: 24px;
+      white-space: nowrap;
+      // margin-right: 10px;
+
+      //每 0.1s 往左移動 10px
+      //從右到左 210px 需要 2.1s
+
+      &:first-child {
+        animation: marquee_ticker_first 20s linear infinite;
+      }
+
+      &:nth-child(2) {
+        display: block;
+        animation: marquee_ticker_second 20s linear infinite;
+        animation-delay: 10s;
+        margin-left: 16px;
+
+        @keyframes marquee_ticker_first {
+          0% {
+            transform: translateX(100%);
+          }
+
+          100% {
+            transform: translateX(-150%);
+          }
+        }
+
+        @keyframes marquee_ticker_second {
+          0% {
+            transform: translateX(0%);
+          }
+
+          100% {
+            transform: translateX(-250%);
+          }
+        }
+      }
+    }
+  }
+
+  //三張工程師卡片
+  .career_card_container {
+    // width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 12%;
+    padding-right: 12%;
+
+    @include mobile() {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  // 卡片
+  .career_card {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 42px;
+    margin-top: 80px;
+    background: #fff url("../image/training/training-bg.png");
+    border-radius: 16px;
+    border: 1px solid $neutral-gray-200;
+    list-style: none;
+    width: 100%;
+
+    @include mobile() {
+      border-radius: 0;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  .card_content_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  .career_card_title {
+    align-self: flex-start;
+    margin-top: -32px;
+    margin-bottom: 28px;
+    width: 100%;
+
+    @include mobile() {
+      order: -10;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      display: inline-block;
+      padding: 12px 40px;
+      border: 2px solid $neutral-gray-700;
+      border-radius: 12px;
+      box-shadow: 4px 4px 0 $neutral-gray-700;
+      background-color: #fff;
+      line-height: normal;
+      font-size: $font-size-body-24;
+      outline: none;
+
+      @include mobile() {
+        font-size: $font-size-body-20;
+      }
+    }
+  }
+  .card_content {
+    width: 60%;
+
+    @include mobile() {
+      width: 100%;
+    }
+  }
+  .card_content_content {
+    margin-top: 36px;
+
+    @include mobile() {
+      margin-top: 24px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+
+      @include mobile() {
+        margin-top: 24px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    h4 {
+      display: inline-block;
+      margin-bottom: 16px;
+      border-bottom: 3px solid $neutral-gray-700;
+      font-size: $font-size-body-20;
+
+      @include mobile() {
+        font-size: $font-size-body-18;
+      }
+    }
+
+    .underline_style {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    ol {
+      margin-left: 20px;
+
+      li {
+        font-weight: 400;
+
+        &::marker {
+          font-family: "Noto Sans TC", sans-serif;
+        }
+      }
+    }
+  }
+  .card_img {
+    width: 30%;
+
+    @include mobile() {
+      width: 50%;
+      order: -1;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  //教練團
+  .coach {
+    width: 100%;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile() {
+      margin-top: 40px;
+    }
+
+    h3 {
+      display: block;
+      align-self: flex-start;
+      margin-left: 12%;
+
+      @include mobile() {
+        margin-left: 48px;
+      }
+    }
+  }
+  .coach_container {
+    width: 100%;
+  }
+  .coach_card_container_inside {
+    padding-left: 12%;
+
+    @include mobile() {
+      padding-left: 48px;
+    }
+  }
+  .coach_card {
+    width: 251px;
+    height: 160px;
+    border-radius: 16px;
+    background-color: #fff;
+    border: 2px solid $neutral-gray-700;
+    display: flex;
+    align-items: end;
+    margin-top: 40px;
+
+    &:hover .coach_name {
+      margin-top: -40px;
+    }
+
+    &:active,
+    &.active {
+      background-color: $primary-blue-100;
+    }
+
+    @include mobile() {
+      width: 332px;
+      height: 200px;
+    }
+
+    img {
+      width: 180px;
+
+      @include mobile() {
+        width: 220px;
+      }
+    }
+  }
+  .coach_name {
+    writing-mode: vertical-lr;
+    padding: 16px 16px 12px 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid $neutral-gray-700;
+    box-shadow: 4px 4px 0 $neutral-gray-700;
+    letter-spacing: 0.5em;
+    vertical-align: middle;
+    align-self: flex-start;
+    margin-top: -24px;
+
+    @include mobile() {
+      font-size: $font-size-body-18;
+      margin-left: 26px;
+    }
+  }
+  .coach_description {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 28px;
+
+    @include mobile() {
+      // max-width: 332px;
+    }
+    h4 {
+      font-size: $font-size-body-24;
+
+      @include mobile() {
+        font-size: $font-size-body-20;
+      }
+    }
+    ul {
+      margin-top: 12px;
+      margin-left: 20px;
+
+      li,
+      a {
+        font-weight: 400;
+        color: $neutral-gray-700;
+      }
+    }
+  }
+}
+
+#faq {
+  .faq_container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 128px;
+    padding-bottom: 124px;
+    gap: 60px;
+
+    @include mobile() {
+      padding-top: 92px;
+      padding-bottom: 76px;
+      gap: 48px;
+    }
+  }
+  section {
+    li {
+      font-size: $font-size-body-16;
+      font-weight: 500;
+      list-style: none;
+    }
+  }
+  .question_item {
+    border-top: 2px solid $neutral-gray-200;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+
+    @include mobile() {
+      padding: 20px 0;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid $neutral-gray-200;
+    }
+
+    img {
+      width: 24px;
+      margin-right: 20px;
+    }
+  }
+  .question_item_Q,
+  .question_item_A {
+    max-width: 761px;
+    width: 100%;
+  }
+
+  .question_item_A {
+    font-weight: 400;
+    margin-top: 8px;
+  }
+}
+
+#support {
+  width: 100%;
+  background-color: $neutral-gray-200;
+
+  .support_container {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile() {
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin-top: -16px;
+      margin-left: 5%;
+      font-size: 32px;
+
+      @include mobile() {
+        margin-left: 10%;
+        font-size: 24px;
+      }
+    }
+
+    .support_card_container_outside {
+      margin-top: 32px;
+      width: 100%;
+      overflow-x: scroll;
+      @include scrollbar_none();
+
+      @include mobile() {
+        margin-top: 16px;
+      }
+    }
+
+    .support_card_container {
+      width: 1516px;
+      margin: 0 5%;
+      display: flex;
+      justify-content: start;
+      gap: 24px;
+
+      @include mobile() {
+        width: 1212px;
+        margin: 0 10%;
+        gap: 20px;
+      }
+
+      .support_card_item {
+        list-style: none;
+
+        .support_img {
+          width: 196px;
+          height: 148px;
+          background-color: #fff;
+          border-radius: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include mobile() {
+            width: 156px;
+            height: 120px;
+          }
+
+          img {
+            height: auto;
+          }
+
+          img.rocket,
+          img.goodidea,
+          img.titan,
+          img.skw {
+            width: 100px;
+
+            @include mobile() {
+              width: 80px;
+            }
+          }
+
+          img.hexschool {
+            width: 120px;
+
+            @include mobile() {
+              width: 100px;
+            }
+          }
+
+          img.kdan {
+            width: 160px;
+
+            @include mobile() {
+              width: 140px;
+            }
+          }
+
+          img.wistron {
+            width: 150px;
+
+            @include mobile() {
+              width: 120px;
+            }
+          }
+        }
+
+        .support_text {
+          font-size: $font-size-body-16;
+          margin-top: 16px;
+
+          & p:last-child {
+            font-weight: 500;
+            margin-top: 4px;
+          }
+
+          @include mobile() {
+            font-size: $font-size-body-14;
+          }
+        }
+      }
+    }
+  }
+}

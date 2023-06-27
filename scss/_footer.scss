@@ -1,0 +1,26 @@
+@import "guildline";
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 0;
+
+  @include mobile() {
+    flex-direction: column;
+  }
+
+  p {
+    font-size: $font-size-body-16;
+    font-weight: 400;
+  }
+
+  p:first-child::after {
+    content: "-";
+    margin: 0 8px;
+
+    @include mobile() {
+      display: none;
+    }
+  }
+}

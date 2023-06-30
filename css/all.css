@@ -701,11 +701,18 @@ footer p:first-child::after {
 }
 #success_case li {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #success_case li img {
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+#success_case .case_title {
+  text-align: center;
+  margin-top: 16px;
 }
 
 #training {

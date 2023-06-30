@@ -257,12 +257,20 @@
 
   li {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     img {
       width: 100%;
       height: auto;
       border-radius: 12px;
     }
+  }
+
+  .case_title {
+    text-align: center;
+    margin-top: 16px;
   }
 }
 

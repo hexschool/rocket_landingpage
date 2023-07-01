@@ -6,22 +6,21 @@ const swiper_case = new Swiper(".success_case_swiper", {
     // 排列方向
     fill: "row",
   },
-  spaceBetween: 24,
   breakpoints: {
     // 幻燈片間距
 
     320: {
       // 畫面中要顯示幾張
       slidesPerView: 1.5,
+      spaceBetween: 24,
+      slidesOffsetBefore: 48,
     },
 
     768: {
-      slidesPerView: 5,
+      slidesPerView: 3.5,
+      spaceBetween: 28,
+      slidesOffsetBefore: 72,
     },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
   },
 });
 

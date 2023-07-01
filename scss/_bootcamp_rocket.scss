@@ -245,13 +245,13 @@
 
   .case_card_container {
     width: 100%;
-    // margin: 0 72px;
     margin-top: 28px;
+    padding-right: 72px;
 
     @include mobile() {
       width: 100%;
-      // margin: 0 48px;
       margin-top: 16px;
+      padding-right: 48px;
     }
   }
 
@@ -260,6 +260,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // min-width: 300px;
 
     img {
       width: 100%;
@@ -270,7 +271,7 @@
 
   .case_title {
     text-align: center;
-    margin-top: 16px;
+    margin-top: 12px;
   }
 }
 
@@ -284,7 +285,6 @@
     align-items: center;
 
     @include mobile() {
-      // max-width: 1281px;
       padding-left: 0;
       padding-right: 0;
     }

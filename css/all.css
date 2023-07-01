@@ -692,11 +692,13 @@ footer p:first-child::after {
 #success_case .case_card_container {
   width: 100%;
   margin-top: 28px;
+  padding-right: 72px;
 }
 @media (max-width: 767px) {
   #success_case .case_card_container {
     width: 100%;
     margin-top: 16px;
+    padding-right: 48px;
   }
 }
 #success_case li {
@@ -712,7 +714,7 @@ footer p:first-child::after {
 }
 #success_case .case_title {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 #training {

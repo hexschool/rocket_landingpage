@@ -186,6 +186,11 @@ if (coworkPage) {
     centeredSlidesBounds: true,
     loop: true,
     mousewheel: true,
+    autoplay: {
+      delay: 1500,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
 
     breakpoints: {
       320: {

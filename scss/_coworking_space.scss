@@ -352,8 +352,11 @@
     line-height: normal;
 
     @include mobile() {
-      padding: 12px;
+      padding: 12px 10px;
       font-size: $font-size-body-14;
+    }
+    @include small_mobile() {
+      white-space: wrap;
     }
   }
   .notice_sharp_outside {

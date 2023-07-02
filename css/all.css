@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap");
 * {
   margin: 0;
@@ -211,6 +212,11 @@ main {
   }
   #banner .enter_card:last-child {
     margin-top: 46px;
+  }
+}
+@media (max-width: 424px) {
+  #banner .enter_card {
+    width: fit-content;
   }
 }
 #banner .enter_card:hover {
@@ -1582,8 +1588,13 @@ footer p:first-child::after {
 }
 @media (max-width: 767px) {
   #menu .notice_block {
-    padding: 12px;
+    padding: 12px 10px;
     font-size: 14px;
+  }
+}
+@media (max-width: 424px) {
+  #menu .notice_block {
+    white-space: wrap;
   }
 }
 #menu .notice_sharp_outside {

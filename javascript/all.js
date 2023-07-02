@@ -1,34 +1,38 @@
-// --- 成功案例 swiper ---
-const swiper_case = new Swiper(".success_case_swiper", {
-  // 格線排列
-  grid: {
-    rows: 2,
-    // 排列方向
-    fill: "row",
-  },
-  breakpoints: {
-    // 幻燈片間距
+const rocketPage = document.querySelector(".rocket_page");
+const coworkPage = document.querySelector(".cowork_page");
 
-    320: {
-      // 畫面中要顯示幾張
-      slidesPerView: 1.5,
-      spaceBetween: 24,
-      slidesOffsetBefore: 48,
+if (rocketPage) {
+  // --- 成功案例 swiper ---
+  const swiper_case = new Swiper(".success_case_swiper", {
+    // 格線排列
+    grid: {
+      rows: 2,
+      // 排列方向
+      fill: "row",
     },
+    breakpoints: {
+      // 幻燈片間距
 
-    768: {
-      slidesPerView: 3.5,
-      spaceBetween: 28,
-      slidesOffsetBefore: 72,
+      320: {
+        // 畫面中要顯示幾張
+        slidesPerView: 1.5,
+        spaceBetween: 24,
+        slidesOffsetBefore: 48,
+      },
+
+      768: {
+        slidesPerView: 3.5,
+        spaceBetween: 28,
+        slidesOffsetBefore: 72,
+      },
     },
-  },
-});
+  });
 
-// 教練卡片
-const cardContainer = document.querySelector(".coach_card_container_inside");
-const coachCard = [...cardContainer.children];
-const coachDes = document.querySelector(".coach_description");
-const coachWeijie = `<h4>前端教練 | 廖洧杰</h4>
+  // 教練卡片
+  const cardContainer = document.querySelector(".coach_card_container_inside");
+  const coachCard = [...cardContainer.children];
+  const coachDes = document.querySelector(".coach_description");
+  const coachWeijie = `<h4>前端教練 | 廖洧杰</h4>
       <ul>
           <li>
               2016-2022 過往經歷：<a href="https://www.hexschool.com/">六角學院校長</a>、<a href="https://www.facebook.com/%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%9F%B9%E8%A8%93%E7%87%9F-113926539963626">高雄火箭隊</a>前端教練
@@ -38,14 +42,14 @@ const coachWeijie = `<h4>前端教練 | 廖洧杰</h4>
           <li>2014-2019 線下授課：<a href="https://www.im.nuk.edu.tw/?page_id=95">高雄大學前端領域兼任講師</a></li>
           <li>2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統</li>
       </ul>`;
-const coachYinmin = `<h4>前端教練 | 穎旻</h4>
+  const coachYinmin = `<h4>前端教練 | 穎旻</h4>
           <ul>
               <li>六角學院前端工程師</li>
               <li>六角學院前端講師</li>
               <li>金龍國小教育訓練講師</li>
               <li>國泰產險教育訓練講師</li>
       </ul>`;
-const coachJustin = `<h4>後端教練 | 賈斯汀</h4>
+  const coachJustin = `<h4>後端教練 | 賈斯汀</h4>
       <ul>
           <li>高雄市警察局縣市合併內外部整合</li>
           <li>嘉義縣警察局全球資訊網與內部知識網</li>
@@ -75,7 +79,7 @@ const coachJustin = `<h4>後端教練 | 賈斯汀</h4>
           <li>行政院南區服務中心網站</li>
           <li>經濟部水利署南區水資源局 105 年度業務及全球資訊網站維護及功能擴充計畫</li>
       </ul>`;
-const coachCasper = `<h4>UI 教練 | 卡斯伯</h4>
+  const coachCasper = `<h4>UI 教練 | 卡斯伯</h4>
       <ul>
           <li>2016-2022 過往經歷：<a href="https://www.hexschool.com/">六角學院</a>共同創辦人</li>
           <li>2016-2022 近期授課經驗：<a href="https://www.hexschool.com/courses/vue-training.html">Vue 3 直播班講師</a>、<a href="https://www.youtube.com/watch?v=qRZLtIcPdls&list=RDCMUC-b2nGm0xLzic38Byti0VjA&start_radio=1">從 Figma 到 VSCode，設計做到網頁切版</a></li>
@@ -89,88 +93,110 @@ const coachCasper = `<h4>UI 教練 | 卡斯伯</h4>
           <li>技術 Blog - 卡斯伯前端</li>
       </ul>`;
 
-function changeCoach() {
-  cardContainer.addEventListener("click", (e) => {
-    //找到點擊了誰
-    const elementClass = e.target.classList;
-    let coachName = "";
-    if (elementClass.contains("coach_card")) {
-      coachName = e.target.dataset.coach;
-    }
-    if (
-      elementClass.contains("coach_img") ||
-      elementClass.contains("coach_name")
-    ) {
-      coachName = e.target.parentNode.dataset.coach;
-    }
+  function changeCoach() {
+    cardContainer.addEventListener("click", (e) => {
+      //找到點擊了誰
+      const elementClass = e.target.classList;
+      let coachName = "";
+      if (elementClass.contains("coach_card")) {
+        coachName = e.target.dataset.coach;
+      }
+      if (
+        elementClass.contains("coach_img") ||
+        elementClass.contains("coach_name")
+      ) {
+        coachName = e.target.parentNode.dataset.coach;
+      }
 
-    switch (coachName) {
-      case "weijie":
-        coachDes.innerHTML = coachWeijie;
-        break;
-      case "yinmin":
-        coachDes.innerHTML = coachYinmin;
-        break;
-      case "justin":
-        coachDes.innerHTML = coachJustin;
-        break;
-      case "casper":
-        coachDes.innerHTML = coachCasper;
-        break;
-    }
+      switch (coachName) {
+        case "weijie":
+          coachDes.innerHTML = coachWeijie;
+          break;
+        case "yinmin":
+          coachDes.innerHTML = coachYinmin;
+          break;
+        case "justin":
+          coachDes.innerHTML = coachJustin;
+          break;
+        case "casper":
+          coachDes.innerHTML = coachCasper;
+          break;
+      }
 
-    // 如果是指定教練，給 card .active，如果不是就移除 .active
+      // 如果是指定教練，給 card .active，如果不是就移除 .active
+      coachCard.forEach((item) => {
+        const isActiveCoach = item.dataset.coach === coachName;
+        item.classList.toggle("active", isActiveCoach);
+      });
+    });
+  }
+
+  changeCoach();
+
+  //swiper
+  const swiper_coach = new Swiper(".coach_swiper", {
+    // 格線排列
+    grid: {
+      rows: 1,
+      // 排列方向
+      fill: "row",
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 28,
+        width: 332,
+        centeredSlides: true,
+      },
+
+      768: {
+        spaceBetween: 24,
+        width: 251,
+        centeredSlides: true,
+      },
+
+      1229: {
+        spaceBetween: 24,
+        width: 1076,
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  swiper_coach.on("slideChange", function () {
+    const coachObj = [
+      { activeIndex: 0, text: coachWeijie, dataName: "weijie" },
+      { activeIndex: 1, text: coachYinmin, dataName: "yinmin" },
+      { activeIndex: 2, text: coachJustin, dataName: "justin" },
+      { activeIndex: 3, text: coachCasper, dataName: "casper" },
+    ];
+
+    const actIndex = swiper_coach.activeIndex;
+    coachDes.innerHTML = coachObj[actIndex].text;
+
     coachCard.forEach((item) => {
-      const isActiveCoach = item.dataset.coach === coachName;
+      const isActiveCoach = item.dataset.coach === coachObj[actIndex].dataName;
       item.classList.toggle("active", isActiveCoach);
     });
   });
 }
 
-changeCoach();
+if (coworkPage) {
+  const swiper_carousel = new Swiper(".carousel", {
+    spaceBetween: 24,
+    centeredSlidesBounds: true,
+    loop: true,
+    mousewheel: true,
 
-//swiper
-const swiper_coach = new Swiper(".coach_swiper", {
-  // 格線排列
-  grid: {
-    rows: 1,
-    // 排列方向
-    fill: "row",
-  },
-  breakpoints: {
-    320: {
-      spaceBetween: 28,
-      width: 332,
-      centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+      },
+
+      768: {
+        slidesPerView: 2.5,
+      },
     },
-
-    768: {
-      spaceBetween: 24,
-      width: 251,
-      centeredSlides: true,
-    },
-
-    1229: {
-      spaceBetween: 24,
-      width: 1076,
-      slidesPerView: 4,
-    },
-  },
-});
-
-swiper_coach.on("slideChange", function () {
-  const coachObj = [
-    { activeIndex: 0, text: coachWeijie, dataName: "weijie" },
-    { activeIndex: 1, text: coachYinmin, dataName: "yinmin" },
-    { activeIndex: 2, text: coachJustin, dataName: "justin" },
-    { activeIndex: 3, text: coachCasper, dataName: "casper" },
-  ];
-
-  const actIndex = swiper_coach.activeIndex;
-  coachDes.innerHTML = coachObj[actIndex].text;
-
-  coachCard.forEach((item) => {
-    const isActiveCoach = item.dataset.coach === coachObj[actIndex].dataName;
-    item.classList.toggle("active", isActiveCoach);
   });
-});
+
+  console.log(swiper_carousel);
+}

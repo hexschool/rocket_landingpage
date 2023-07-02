@@ -10,6 +10,7 @@ if (rocketPage) {
       // 排列方向
       fill: "row",
     },
+    mousewheel: true,
     breakpoints: {
       // 幻燈片間距
 

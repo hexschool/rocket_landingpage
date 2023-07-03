@@ -51,6 +51,10 @@
       }
     }
 
+    @include small_mobile() {
+      width: fit-content;
+    }
+
     //enter_card 滑鼠移過
     &:hover {
       margin-top: -16px;

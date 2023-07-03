@@ -161,7 +161,6 @@
       }
 
       .place_card_text {
-        // width: 494px;
         width: 45%;
 
         @include mobile() {
@@ -282,8 +281,8 @@
   .carousel {
     margin-bottom: 80px;
     width: 100%;
-    overflow-x: scroll;
-    @include scrollbar_none();
+    // overflow-x: scroll;
+    // @include scrollbar_none();
 
     @include mobile() {
       margin-bottom: 40px;
@@ -292,21 +291,17 @@
   .carousel_container {
     display: flex;
     max-width: 1440px;
-    gap: 0 24px;
+    padding-left: 48px;
 
     @include mobile() {
       padding-left: 48px;
     }
   }
-  .carousel_img {
-    width: 636px;
-    height: 424px;
-    border-radius: 12px;
 
-    @include mobile() {
-      width: 332px;
-      height: 240px;
-    }
+  .carousel_img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -338,11 +333,10 @@
 
   .notice {
     width: fit-content;
-    margin-bottom: 25px; //還要加上下面角角，感覺尺寸要調？
+    margin-bottom: 25px;
     margin-left: 80px;
 
     @include mobile() {
-      width: 100%;
       height: auto;
       margin-left: 0;
     }
@@ -358,8 +352,11 @@
     line-height: normal;
 
     @include mobile() {
-      padding: 12px;
+      padding: 12px 10px;
       font-size: $font-size-body-14;
+    }
+    @include small_mobile() {
+      white-space: wrap;
     }
   }
   .notice_sharp_outside {

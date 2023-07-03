@@ -14,13 +14,25 @@
     <meta name="description" content="共同空間" />
     <meta name="copyright" content="火箭隊軟體培訓營" />
     <meta property="og:title" content="共同空間" />
-    <meta property="og:image" content="https://github.com/hexschool/rocket_landingpage/blob/main/image/hexschool.ico?raw=true" />
+    <meta
+      property="og:image"
+      content="https://github.com/hexschool/rocket_landingpage/blob/main/image/hexschool.ico?raw=true"
+    />
     <meta
       property="og:description"
       content="共同空間有近 100 坪的空間，在開放式的公共區域中有休憩區以及舒適沙發討論區，在設計上盡量讓空間規劃簡單俐落，沒有多餘的裝修，我們營運空間的理念很簡單，希望藉由這裡能與更多「人」締結關係，並凝聚更多熱愛分享程式的進駐培訓者，讓這裡打造實現開發能量的集聚地。"
     />
 
+    <!-- import -->
+    <!-- swiper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+      defer
+    ></script>
+
+    <!-- project -->
     <link rel="stylesheet" href="./css/all.css" />
+    <script src="./javascript/all.js" defer></script>
   </head>
   <body>
     <div id="marquee">
@@ -272,59 +284,75 @@
             </ul>
           </div>
         </div>
-        <div class="carousel">
-          <div class="carousel_container">
-            <img
-              src="./image/share_place/carousel1-lg.png"
-              alt="carousel1-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel2-lg.png"
-              alt="carousel2-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel3-lg.png"
-              alt="carousel3-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel4-lg.png"
-              alt="carousel4-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel5-lg.png"
-              alt="carousel5-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel6-lg.png"
-              alt="carousel6-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel7-lg.png"
-              alt="carousel7-lg"
-              class="carousel_img"
-            />
-            <img
-              src="./image/share_place/carousel8-lg.png"
-              alt="carousel8-lg"
-              class="carousel_img"
-            />
-          </div>
+        <div class="carousel swiper">
+          <ul class="carousel_container swiper-wrapper">
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel1-lg.png"
+                alt="carousel1-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel2-lg.png"
+                alt="carousel2-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel3-lg.png"
+                alt="carousel3-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel4-lg.png"
+                alt="carousel4-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel5-lg.png"
+                alt="carousel5-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel6-lg.png"
+                alt="carousel6-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel7-lg.png"
+                alt="carousel7-lg"
+                class="carousel_img"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                src="./image/share_place/carousel8-lg.png"
+                alt="carousel8-lg"
+                class="carousel_img"
+              />
+            </li>
+          </ul>
         </div>
       </div>
       <div id="menu">
         <div class="menu_header_container container_sm">
           <div class="notice">
             <p class="notice_block">
-              <span class="bold_style">2023 年</span
-              >為試營運階段，進駐可享有<span class="bold_style"
-                >限定優惠價！</span
-              >
+              <span class="bold_style">2023</span>
+              年為試營運階段，進駐可享有<span class="bold_style"
+                >限定優惠價</span
+              >！
             </p>
             <div class="notice_sharp_outside">
               <div class="notice_sharp_inside"></div>
@@ -419,7 +447,7 @@
             <h3 class="button_text">馬上填表單！</h3>
             <img
               class="button_img"
-              src="./image/share_place/ic-go-coworking.png"
+              src="./image/share_place/ic-go-coworking.svg"
               alt="ic-go-coworking"
             />
           </a>

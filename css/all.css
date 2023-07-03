@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap");
 * {
   margin: 0;
@@ -211,6 +212,11 @@ main {
   }
   #banner .enter_card:last-child {
     margin-top: 46px;
+  }
+}
+@media (max-width: 424px) {
+  #banner .enter_card {
+    width: fit-content;
   }
 }
 #banner .enter_card:hover {
@@ -525,14 +531,10 @@ footer p:first-child::after {
 }
 #about_rocket .card_container {
   width: 100%;
-  height: 592px;
+  height: 650px;
   overflow-y: scroll;
   overflow-x: visible;
   gap: 32px 0;
-}
-#about_rocket .card_container::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 @media (max-width: 1023px) {
   #about_rocket .card_container {
@@ -692,20 +694,29 @@ footer p:first-child::after {
 #success_case .case_card_container {
   width: 100%;
   margin-top: 28px;
+  padding-right: 72px;
 }
 @media (max-width: 767px) {
   #success_case .case_card_container {
     width: 100%;
     margin-top: 16px;
+    padding-right: 48px;
   }
 }
 #success_case li {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #success_case li img {
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+#success_case .case_title {
+  text-align: center;
+  margin-top: 12px;
 }
 
 #training {
@@ -1500,11 +1511,6 @@ footer p:first-child::after {
 #space .carousel {
   margin-bottom: 80px;
   width: 100%;
-  overflow-x: scroll;
-}
-#space .carousel::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 @media (max-width: 767px) {
   #space .carousel {
@@ -1514,7 +1520,7 @@ footer p:first-child::after {
 #space .carousel_container {
   display: flex;
   max-width: 1440px;
-  gap: 0 24px;
+  padding-left: 48px;
 }
 @media (max-width: 767px) {
   #space .carousel_container {
@@ -1522,15 +1528,9 @@ footer p:first-child::after {
   }
 }
 #space .carousel_img {
-  width: 636px;
-  height: 424px;
   border-radius: 12px;
-}
-@media (max-width: 767px) {
-  #space .carousel_img {
-    width: 332px;
-    height: 240px;
-  }
+  width: 100%;
+  height: auto;
 }
 
 #menu {
@@ -1568,7 +1568,6 @@ footer p:first-child::after {
 }
 @media (max-width: 767px) {
   #menu .notice {
-    width: 100%;
     height: auto;
     margin-left: 0;
   }
@@ -1585,8 +1584,13 @@ footer p:first-child::after {
 }
 @media (max-width: 767px) {
   #menu .notice_block {
-    padding: 12px;
+    padding: 12px 10px;
     font-size: 14px;
+  }
+}
+@media (max-width: 424px) {
+  #menu .notice_block {
+    white-space: wrap;
   }
 }
 #menu .notice_sharp_outside {

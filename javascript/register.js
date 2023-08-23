@@ -229,13 +229,13 @@ const faqAry = [
         id: 1,
         question: "一個梯次預計會錄取多少人，預計多久會再招收新的一梯次呢？",
         answer:
-          "一個梯次預計錄取4個人，會等到他們學習到一個階段，再招收新的梯次。",
+          "一個梯次預計錄取4個人，會等到培訓學員學習到一個階段，再招收新的梯次。",
       },
       {
         id: 2,
         question: "目前已經有工作，有沒有晚上的梯次呢？",
         answer:
-          "目前因為空間與資源都有限，目前只能開白天的梯次，未來希望有更多認同我們的人或公司加入，再來開晚上的梯次。",
+          "目前因為空間與資源都有限，只能開白天的梯次。未來希望有更多認同我們的人或公司加入，再來開晚上的梯次。",
       },
       {
         id: 3,
@@ -279,13 +279,14 @@ const faqAry = [
 
 //----------
 
+// 最近梯次
 const batchTicker = document.querySelector(".new_batch_ticker");
 const batchTickerContent = `
 <p class="new_batch_ticker_text">${batch}</p>
 <p class="new_batch_ticker_text">${batch}</p>`;
 batchTicker.innerHTML = batchTickerContent;
-console.log(batchTickerContent);
 
+// FAQ
 const faq = document.querySelector(".faq_container");
 let title;
 let htmlContent;

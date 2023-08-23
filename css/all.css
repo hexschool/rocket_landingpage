@@ -1099,6 +1099,8 @@ footer p:first-child::after {
 #faq .question_item_A {
   max-width: 761px;
   width: 100%;
+  text-indent: -1.8em;
+  margin-left: 1.5em;
 }
 #faq .question_item_Q::before {
   content: "Q：";

@@ -234,14 +234,15 @@
       align-items: start;
     }
   }
-  .service_card_img {
+  .service_card_img img {
+    width: 120px;
+    height: 120px;
+
     @include mobile() {
       max-width: 48px;
-    }
-
-    & img {
-      width: 100%;
-      height: auto;
+      max-height: 48px;
+      width: 48px;
+      height: 48px;
     }
   }
   .service_card_text {

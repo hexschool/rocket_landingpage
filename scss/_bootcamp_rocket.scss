@@ -675,9 +675,18 @@
     width: 100%;
   }
 
+  .question_item_Q {
+    &::before {
+      content: "Q：";
+    }
+  }
   .question_item_A {
     font-weight: 400;
     margin-top: 8px;
+
+    &::before {
+      content: "A：";
+    }
   }
 }
 

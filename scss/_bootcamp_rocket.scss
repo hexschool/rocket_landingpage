@@ -673,11 +673,22 @@
   .question_item_A {
     max-width: 761px;
     width: 100%;
+    text-indent: -1.8em;
+    margin-left: 1.5em;
   }
 
+  .question_item_Q {
+    &::before {
+      content: "Q：";
+    }
+  }
   .question_item_A {
     font-weight: 400;
     margin-top: 8px;
+
+    &::before {
+      content: "A：";
+    }
   }
 }
 

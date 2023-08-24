@@ -226,6 +226,10 @@
   width: 100%;
   margin: 0 auto;
 
+  @include large_desktop() {
+    max-width: auto;
+  }
+
   .case_container {
     display: flex;
     flex-direction: column;
@@ -250,6 +254,10 @@
       width: 100%;
       margin-top: 16px;
       padding-right: 48px;
+    }
+
+    @include large_desktop() {
+      padding-right: 0;
     }
   }
 

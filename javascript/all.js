@@ -26,6 +26,12 @@ if (rocketPage) {
         spaceBetween: 28,
         slidesOffsetBefore: 72,
       },
+
+      1441: {
+        slidesPerView: 5,
+        spaceBetween: 28,
+        slidesOffsetBefore: 0,
+      },
     },
   });
 
@@ -199,6 +205,4 @@ if (coworkPage) {
       },
     },
   });
-
-  console.log(swiper_carousel);
 }

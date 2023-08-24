@@ -631,7 +631,6 @@
       li,
       a {
         font-weight: 400;
-        color: $neutral-gray-700;
       }
     }
   }
@@ -698,6 +697,16 @@
     margin-top: 8px;
     &::before {
       content: "A：";
+    }
+  }
+
+  .faq_link {
+    padding-left: 40px;
+
+    & > li {
+      list-style: disc;
+      line-height: 1.8em;
+      padding-left: 4px;
     }
   }
 }

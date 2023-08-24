@@ -20,6 +20,10 @@
 a {
   color: $neutral-gray-700;
   font-weight: 400;
+
+  &:hover {
+    color: $neutral-gray-500;
+  }
 }
 
 img {

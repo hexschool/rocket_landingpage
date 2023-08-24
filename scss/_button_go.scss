@@ -38,6 +38,8 @@
     opacity: 1;
     margin-left: 20px;
   }
-}
 
-//cd
+  &:hover {
+    color: $neutral-gray-700;
+  }
+}

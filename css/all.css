@@ -19,6 +19,9 @@ a {
   color: #363636;
   font-weight: 400;
 }
+a:hover {
+  color: #9a9a9a;
+}
 
 img {
   vertical-align: bottom;
@@ -170,6 +173,7 @@ main {
 }
 #banner a {
   text-decoration: none;
+  color: #363636;
 }
 #banner .banner_container {
   display: flex;
@@ -422,6 +426,9 @@ main {
   width: 64px;
   opacity: 1;
   margin-left: 20px;
+}
+.button_go:hover {
+  color: #363636;
 }
 
 footer {
@@ -1065,7 +1072,6 @@ footer p:first-child::after {
 #training .coach_description ul li,
 #training .coach_description ul a {
   font-weight: 400;
-  color: #363636;
 }
 
 #faq .faq_container {
@@ -1120,6 +1126,14 @@ footer p:first-child::after {
 }
 #faq .question_item_A::before {
   content: "A：";
+}
+#faq .faq_link {
+  padding-left: 40px;
+}
+#faq .faq_link > li {
+  list-style: disc;
+  line-height: 1.8em;
+  padding-left: 4px;
 }
 
 #support {

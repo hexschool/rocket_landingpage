@@ -4,7 +4,46 @@
 const batch =
   "第十五梯 (2023/12/04~2024/06/30) 、第十六梯 (2024/03/01~2024/09/30)";
 
-//QA，一組最多五個（只有五個 icon）
+// 分享連結內容陣列
+const expLinks = [
+  {
+    title: "從高雄火箭隊到第一份前端工作",
+    link: "https://jazztyy.medium.com/%E5%BE%9E%E9%AB%98%E9%9B%84%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%88%B0%E7%AC%AC%E4%B8%80%E4%BB%BD%E5%B7%A5%E4%BD%9C-ac0cc9499c65",
+  },
+  {
+    title: "我們都是神奇寶貝｜加入火箭隊心得分享",
+    link: "https://vocus.cc/@xavier/5d292836fd89780001e222e2?fbclid=IwAR06YRcKrl0zKi41rfQcxhV_P187kL9Rd8uoSBQL_7UPCO5vJM86edw4WSU",
+  },
+  {
+    title: "六角學院 — 火箭隊軟體工程師培訓營",
+    link: "https://medium.com/@sun8chi/%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2-%E7%81%AB%E7%AE%AD%E9%9A%8A%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%9F%B9%E8%A8%93%E7%87%9F-8cf2c03549dc",
+  },
+  {
+    title: "程式專題開發流程分享 — 以火箭隊為例",
+    link: "https://medium.com/@gonsakon/%E7%A8%8B%E5%BC%8F%E5%B0%88%E9%A1%8C%E9%96%8B%E7%99%BC%E6%B5%81%E7%A8%8B%E5%88%86%E4%BA%AB-%E4%BB%A5%E7%81%AB%E7%AE%AD%E9%9A%8A%E7%82%BA%E4%BE%8B-fc2c2b647a2f",
+  },
+  {
+    title: "我在火箭隊學到突破程式邏輯的四種方法",
+    link: "https://medium.com/@gonsakon/%E6%88%91%E5%9C%A8%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%AD%B8%E5%88%B0%E7%AA%81%E7%A0%B4%E7%A8%8B%E5%BC%8F%E9%82%8F%E8%BC%AF%E7%9A%84%E5%9B%9B%E7%A8%AE%E6%96%B9%E6%B3%95-2ba6a8497809",
+  },
+  {
+    title: "從自學到火箭隊 - 網頁心路歷程",
+    link: "https://medium.com/@jedy05097952/%E5%BE%9E%E8%87%AA%E5%AD%B8%E5%88%B0%E7%81%AB%E7%AE%AD%E9%9A%8A-%E7%B6%B2%E9%A0%81%E5%AD%B8%E7%BF%92%E6%AD%B7%E7%A8%8B-e0e9b426ad11",
+  },
+  {
+    title: "分享一個月內使用新技術完成作品— 火箭隊培訓營",
+    link: "https://medium.com/@alice0050722/%E5%88%86%E4%BA%AB%E4%B8%80%E5%80%8B%E6%9C%88%E5%85%A7%E4%BD%BF%E7%94%A8%E6%96%B0%E6%8A%80%E8%A1%93%E5%AE%8C%E6%88%90%E4%BD%9C%E5%93%81-%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%9F%B9%E8%A8%93%E7%87%9F-b028305f8d41",
+  },
+];
+
+let expLinksHtml = "";
+expLinks.forEach((link) => {
+  const linkItem = `<li><a href="${link.link}" target="_blank" rel="noreferrer noopener">
+  ${link.title}</a></li>`;
+  expLinksHtml += linkItem;
+});
+
+//QA 內容陣列，一組最多五個（只有五個 icon）
 const faqAry = [
   {
     title: "報名資訊",
@@ -218,7 +257,7 @@ const faqAry = [
       {
         id: 5,
         question: "火箭隊有什麼核心思想？",
-        answer: `在火箭隊的宗旨中， <span class="mark_style">熱愛分享</span> 是非常重要的。<br />在這裡您永遠會遇到需要您技術的人，藉由相互分享，讓彼此都獲得新知。才能讓 1+1 = 無限，也才不會認為只有自己孤軍奮戰，同時藉由分享才能夠讓自己了解，自己是否了解該技術，藉由分享也能疏理自己脈絡，讓自己更加深入該技術核心。`,
+        answer: `在火箭隊的宗旨中， <span class="mark_style">熱愛分享</span>是非常重要的。<br />在這裡您永遠會遇到需要您技術的人，藉由相互分享，讓彼此都獲得新知。才能讓 1+1 = 無限，也才不會認為只有自己孤軍奮戰，同時藉由分享才能夠讓自己了解，自己是否了解該技術，藉由分享也能疏理自己脈絡，讓自己更加深入該技術核心。`,
       },
     ],
   },
@@ -243,38 +282,13 @@ const faqAry = [
         answer:
           "目前沒有，未來希望有擁有相關技術的人或公司願意認同我們，加入培育相關技術人才。",
       },
+      {
+        id: 4,
+        question: "我想多瞭解火箭隊，有什麼可以參考？",
+        answer: `<a href="https://www.facebook.com/profile.php?id=100039975056467" target="_blank" rel="noreferrer noopener">火箭隊培訓營粉專</a>有火箭隊學員們的日常小趣事，還有老師和學長姐們的心得分享：<ul class="faq_link">${expLinksHtml}</ul>`,
+      },
     ],
   },
-  // {
-  //   title: "培訓流程",
-  //   content: [
-  //     {
-  //       id: 1,
-  //       question: "",
-  //       answer: "",
-  //     },
-  //     {
-  //       id: 2,
-  //       question: "",
-  //       answer: "",
-  //     },
-  //     {
-  //       id: 3,
-  //       question: "",
-  //       answer: "",
-  //     },
-  //     {
-  //       id: 4,
-  //       question: "",
-  //       answer: "",
-  //     },
-  //     {
-  //       id: 5,
-  //       question: "",
-  //       answer: "",
-  //     },
-  //   ],
-  // },
 ];
 
 //----------

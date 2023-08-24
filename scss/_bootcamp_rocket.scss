@@ -633,9 +633,9 @@
   .faq_container {
     display: flex;
     flex-direction: column;
+    gap: 60px;
     padding-top: 128px;
     padding-bottom: 124px;
-    gap: 60px;
 
     @include mobile() {
       padding-top: 92px;
@@ -674,8 +674,9 @@
   .question_item_A {
     max-width: 761px;
     width: 100%;
-    text-indent: -1.8em;
-    margin-left: 1.5em;
+    // text-indent: -1.8em;
+    // margin-left: 1.5em;
+    // padding-right: 1.5em;
   }
 
   .question_item_Q {
@@ -683,10 +684,10 @@
       content: "Q：";
     }
   }
+
   .question_item_A {
     font-weight: 400;
     margin-top: 8px;
-
     &::before {
       content: "A：";
     }

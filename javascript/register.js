@@ -298,7 +298,7 @@ faqAry.forEach((section) => {
   faqContent.forEach((content) => {
     const listItem = `
     <li class="question_item">
-      <img src="./image/training/ic-no${content.id}.png" alt="ic-no${content.id}" />
+      <img src="./image/training/ic-no${content.id}.svg" alt="ic-no${content.id}" />
       <div>
         <p class="question_item_Q">${content.question}</p>
         <p class="question_item_A">${content.answer}</p>

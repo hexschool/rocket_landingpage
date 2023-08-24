@@ -94,45 +94,41 @@ if (rocketPage) {
           <li>技術 Blog - 卡斯伯前端</li>
       </ul>`;
 
-  function changeCoach() {
-    cardContainer.addEventListener("click", (e) => {
-      //找到點擊了誰
-      const elementClass = e.target.classList;
-      let coachName = "";
-      if (elementClass.contains("coach_card")) {
-        coachName = e.target.dataset.coach;
-      }
-      if (
-        elementClass.contains("coach_img") ||
-        elementClass.contains("coach_name")
-      ) {
-        coachName = e.target.parentNode.dataset.coach;
-      }
+  cardContainer.addEventListener("click", (e) => {
+    //找到點擊了誰
+    const elementClass = e.target.classList;
+    let coachName = "";
+    if (elementClass.contains("coach_card")) {
+      coachName = e.target.dataset.coach;
+    }
+    if (
+      elementClass.contains("coach_img") ||
+      elementClass.contains("coach_name")
+    ) {
+      coachName = e.target.parentNode.dataset.coach;
+    }
 
-      switch (coachName) {
-        case "weijie":
-          coachDes.innerHTML = coachWeijie;
-          break;
-        case "yinmin":
-          coachDes.innerHTML = coachYinmin;
-          break;
-        case "justin":
-          coachDes.innerHTML = coachJustin;
-          break;
-        case "casper":
-          coachDes.innerHTML = coachCasper;
-          break;
-      }
+    switch (coachName) {
+      case "weijie":
+        coachDes.innerHTML = coachWeijie;
+        break;
+      case "yinmin":
+        coachDes.innerHTML = coachYinmin;
+        break;
+      case "justin":
+        coachDes.innerHTML = coachJustin;
+        break;
+      case "casper":
+        coachDes.innerHTML = coachCasper;
+        break;
+    }
 
-      // 如果是指定教練，給 card .active，如果不是就移除 .active
-      coachCard.forEach((item) => {
-        const isActiveCoach = item.dataset.coach === coachName;
-        item.classList.toggle("active", isActiveCoach);
-      });
+    // 如果是指定教練，給 card .active，如果不是就移除 .active
+    coachCard.forEach((item) => {
+      const isActiveCoach = item.dataset.coach === coachName;
+      item.classList.toggle("active", isActiveCoach);
     });
-  }
-
-  changeCoach();
+  });
 
   //swiper
   const swiper_coach = new Swiper(".coach_swiper", {

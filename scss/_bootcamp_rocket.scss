@@ -806,7 +806,10 @@
             }
           }
 
-          img.wistron {
+          img.zeabur,
+          img.wistron,
+          img.lingcheng,
+          img.glsoft {
             width: 150px;
 
             @include mobile() {

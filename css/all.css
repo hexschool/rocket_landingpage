@@ -219,11 +219,6 @@ main {
     margin-top: 46px;
   }
 }
-@media (max-width: 424px) {
-  #banner .enter_card {
-    width: fit-content;
-  }
-}
 #banner .enter_card:hover {
   margin-top: -16px;
 }
@@ -1241,11 +1236,17 @@ footer p:first-child::after {
     width: 140px;
   }
 }
-#support .support_container .support_card_container .support_card_item .support_img img.wistron {
+#support .support_container .support_card_container .support_card_item .support_img img.zeabur,
+#support .support_container .support_card_container .support_card_item .support_img img.wistron,
+#support .support_container .support_card_container .support_card_item .support_img img.lingcheng,
+#support .support_container .support_card_container .support_card_item .support_img img.glsoft {
   width: 150px;
 }
 @media (max-width: 767px) {
-  #support .support_container .support_card_container .support_card_item .support_img img.wistron {
+  #support .support_container .support_card_container .support_card_item .support_img img.zeabur,
+  #support .support_container .support_card_container .support_card_item .support_img img.wistron,
+  #support .support_container .support_card_container .support_card_item .support_img img.lingcheng,
+  #support .support_container .support_card_container .support_card_item .support_img img.glsoft {
     width: 120px;
   }
 }

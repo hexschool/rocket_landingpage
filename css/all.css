@@ -19,6 +19,9 @@ a {
   color: #363636;
   font-weight: 400;
 }
+a:hover {
+  color: #9a9a9a;
+}
 
 img {
   vertical-align: bottom;
@@ -107,10 +110,10 @@ main {
 }
 
 .container_xs {
-  max-width: 1440px;
+  max-width: 856px;
   margin: 0 auto;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 @media (max-width: 767px) {
   .container_xs {
@@ -170,6 +173,7 @@ main {
 }
 #banner a {
   text-decoration: none;
+  color: #363636;
 }
 #banner .banner_container {
   display: flex;
@@ -422,6 +426,9 @@ main {
   width: 64px;
   opacity: 1;
   margin-left: 20px;
+}
+.button_go:hover {
+  color: #363636;
 }
 
 footer {
@@ -677,6 +684,11 @@ footer p:first-child::after {
   width: 100%;
   margin: 0 auto;
 }
+@media (min-width: 1441px) {
+  #success_case {
+    max-width: auto;
+  }
+}
 #success_case .case_container {
   display: flex;
   flex-direction: column;
@@ -702,6 +714,11 @@ footer p:first-child::after {
     width: 100%;
     margin-top: 16px;
     padding-right: 48px;
+  }
+}
+@media (min-width: 1441px) {
+  #success_case .case_card_container {
+    padding-right: 0;
   }
 }
 #success_case li {
@@ -976,6 +993,7 @@ footer p:first-child::after {
   }
 }
 #training .coach_container {
+  max-width: 1440px;
   width: 100%;
 }
 #training .coach_card_container_inside {
@@ -1054,15 +1072,14 @@ footer p:first-child::after {
 #training .coach_description ul li,
 #training .coach_description ul a {
   font-weight: 400;
-  color: #363636;
 }
 
 #faq .faq_container {
   display: flex;
   flex-direction: column;
+  gap: 60px;
   padding-top: 128px;
   padding-bottom: 124px;
-  gap: 60px;
 }
 @media (max-width: 767px) {
   #faq .faq_container {
@@ -1099,8 +1116,6 @@ footer p:first-child::after {
 #faq .question_item_A {
   max-width: 761px;
   width: 100%;
-  text-indent: -1.8em;
-  margin-left: 1.5em;
 }
 #faq .question_item_Q::before {
   content: "Q：";
@@ -1111,6 +1126,14 @@ footer p:first-child::after {
 }
 #faq .question_item_A::before {
   content: "A：";
+}
+#faq .faq_link {
+  padding-left: 40px;
+}
+#faq .faq_link > li {
+  list-style: disc;
+  line-height: 1.8em;
+  padding-left: 4px;
 }
 
 #support {

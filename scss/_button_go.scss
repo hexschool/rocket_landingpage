@@ -1,5 +1,3 @@
-@import "guildline";
-
 .button_go_container {
   margin-top: 32px;
   width: 100%;
@@ -38,6 +36,8 @@
     opacity: 1;
     margin-left: 20px;
   }
-}
 
-//cd
+  &:hover {
+    color: $neutral-gray-700;
+  }
+}

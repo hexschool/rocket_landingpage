@@ -1,10 +1,9 @@
-@import "guildline";
-
 #banner {
   background: url("../image/banner/banner-bg.png") repeat top center;
 
   a {
     text-decoration: none;
+    color: $neutral-gray-700;
   }
 
   .banner_container {
@@ -49,10 +48,6 @@
       &:last-child {
         margin-top: 46px;
       }
-    }
-
-    @include small_mobile() {
-      width: fit-content;
     }
 
     //enter_card 滑鼠移過

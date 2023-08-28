@@ -1,5 +1,3 @@
-@import "guildline";
-
 #banner {
   background: url("../image/banner/banner-bg.png") repeat top center;
 
@@ -50,10 +48,6 @@
       &:last-child {
         margin-top: 46px;
       }
-    }
-
-    @include small_mobile() {
-      width: fit-content;
     }
 
     //enter_card 滑鼠移過

@@ -39,7 +39,7 @@ if (rocketPage) {
   const cardContainer = document.querySelector(".coach_card_container_inside");
   const coachCard = [...cardContainer.children];
   const coachDes = document.querySelector(".coach_description");
-  const coachWeijie = `<h4>前端教練 | 廖洧杰</h4>
+  const coachWeijie = `<h4>JS 組教練 | 廖洧杰</h4>
       <ul>
           <li>
               2016-2022 過往經歷：<a href="https://www.hexschool.com/">六角學院校長</a>、<a href="https://www.facebook.com/%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%9F%B9%E8%A8%93%E7%87%9F-113926539963626">高雄火箭隊</a>前端教練
@@ -49,7 +49,7 @@ if (rocketPage) {
           <li>2014-2019 線下授課：<a href="https://www.im.nuk.edu.tw/?page_id=95">高雄大學前端領域兼任講師</a></li>
           <li>2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統</li>
       </ul>`;
-  const coachYinmin = `<h4>前端教練 | 穎旻</h4>
+  const coachYinmin = `<h4>JS 組教練 | 穎旻</h4>
           <ul>
               <li>六角學院前端工程師</li>
               <li>六角學院前端講師</li>

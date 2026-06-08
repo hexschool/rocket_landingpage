@@ -86,7 +86,7 @@ if (rocketPage) {
           <li>行政院南區服務中心網站</li>
           <li>經濟部水利署南區水資源局 105 年度業務及全球資訊網站維護及功能擴充計畫</li>
       </ul>`;
-  const coachCasper = `<h4>UI 教練 | 卡斯伯</h4>
+  const coachCasper = `<h4>專題教練 | 卡斯伯</h4>
       <ul>
           <li>2016-2022 過往經歷：<a href="https://www.hexschool.com/">六角學院</a>共同創辦人</li>
           <li>2016-2022 近期授課經驗：<a href="https://www.hexschool.com/courses/vue-training.html">Vue 3 直播班講師</a>、<a href="https://www.youtube.com/watch?v=qRZLtIcPdls&list=RDCMUC-b2nGm0xLzic38Byti0VjA&start_radio=1">從 Figma 到 VSCode，設計做到網頁切版</a></li>
@@ -97,7 +97,7 @@ if (rocketPage) {
           <li>研討會經驗-經驗豐富的技術開發者 2017 Modern Web 技術講者</li>
           <li>2021 {Laravel x Vue} Conf 技術講者</li>
           <li>五屆 IT 鐵人賽優選</li>
-          <li>技術 Blog - 卡斯伯前端</li>
+          <li><a href="https://www.casper.tw/">技術 Blog - 卡斯伯前端</a></li>
       </ul>`;
 
   cardContainer.addEventListener("click", (e) => {

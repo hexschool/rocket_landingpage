@@ -126,7 +126,7 @@ const faqAry = [
         id: 1,
         question: "培訓的時間是多久呢？",
         answer:
-          "培訓時間為七個月，您可以選擇要投入 JavaScript 軟體工程師、後端工程師或 UI 設計師。",
+          "培訓時間為七個月，您可以選擇要投入 JavaScript 軟體工程師、後端工程師。",
       },
       {
         id: 2,

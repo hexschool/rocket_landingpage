@@ -97,7 +97,7 @@ if (rocketPage) {
           <li>研討會經驗-經驗豐富的技術開發者 2017 Modern Web 技術講者</li>
           <li>2021 {Laravel x Vue} Conf 技術講者</li>
           <li>五屆 IT 鐵人賽優選</li>
-          <li><a href="https://www.casper.tw/">技術 Blog - 卡斯伯前端</a></li>
+          <li><a href="https://www.casper.tw/" target="_blank">技術 Blog - 卡斯伯前端</a></li>
       </ul>`;
 
   cardContainer.addEventListener("click", (e) => {

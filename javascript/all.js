@@ -49,12 +49,12 @@ if (rocketPage) {
           <li>2014-2019 線下授課：<a href="https://www.im.nuk.edu.tw/?page_id=95">高雄大學前端領域兼任講師</a></li>
           <li>2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統</li>
       </ul>`;
-  const coachYinmin = `<h4>JS 組教練 | 穎旻</h4>
+  const coachDennis = `<h4>JS 組教練 | 阿劍</h4>
           <ul>
-              <li>六角學院前端工程師</li>
-              <li>六角學院前端講師</li>
-              <li>金龍國小教育訓練講師</li>
-              <li>國泰產險教育訓練講師</li>
+              <li>資深前端工程師</li>
+              <li>六角學院｜Node.js 企業專題教練長</li>
+              <li>YS 青年職涯發展中心｜活動講師</li>
+              <li>勞動部｜GitHub Actions CI/CD 自動化與 AI 協作實務班講師</li>
       </ul>`;
   const coachJustin = `<h4>後端教練 | 賈斯汀</h4>
       <ul>
@@ -118,8 +118,8 @@ if (rocketPage) {
       case "weijie":
         coachDes.innerHTML = coachWeijie;
         break;
-      case "yinmin":
-        coachDes.innerHTML = coachYinmin;
+      case "dennis":
+        coachDes.innerHTML = coachDennis;
         break;
       case "justin":
         coachDes.innerHTML = coachJustin;
@@ -168,7 +168,7 @@ if (rocketPage) {
   swiper_coach.on("slideChange", function () {
     const coachObj = [
       { activeIndex: 0, text: coachWeijie, dataName: "weijie" },
-      { activeIndex: 1, text: coachYinmin, dataName: "yinmin" },
+      { activeIndex: 1, text: coachDennis, dataName: "dennis" },
       { activeIndex: 2, text: coachJustin, dataName: "justin" },
       { activeIndex: 3, text: coachCasper, dataName: "casper" },
     ];

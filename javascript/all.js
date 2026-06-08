@@ -49,12 +49,12 @@ if (rocketPage) {
           <li>2014-2019 線下授課：<a href="https://www.im.nuk.edu.tw/?page_id=95" target="_blank" rel="noreferrer noopener">高雄大學前端領域兼任講師</a></li>
           <li>2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統</li>
       </ul>`;
-  const coachYinmin = `<h4>JS 組教練 | 穎旻</h4>
+  const coachDennis = `<h4>JS 組教練 | 阿劍</h4>
           <ul>
-              <li>六角學院前端工程師</li>
-              <li>六角學院前端講師</li>
-              <li>金龍國小教育訓練講師</li>
-              <li>國泰產險教育訓練講師</li>
+              <li>資深前端工程師</li>
+              <li>六角學院｜Node.js 企業專題教練長</li>
+              <li>YS 青年職涯發展中心｜活動講師</li>
+              <li>勞動部｜GitHub Actions CI/CD 自動化與 AI 協作實務班講師</li>
       </ul>`;
   const coachJustin = `<h4>後端教練 | 賈斯汀</h4>
       <ul>
@@ -86,7 +86,7 @@ if (rocketPage) {
           <li>行政院南區服務中心網站</li>
           <li>經濟部水利署南區水資源局 105 年度業務及全球資訊網站維護及功能擴充計畫</li>
       </ul>`;
-  const coachCasper = `<h4>UI 教練 | 卡斯伯</h4>
+  const coachCasper = `<h4>專題教練 | 卡斯伯</h4>
       <ul>
           <li>2016-2022 過往經歷：<a href="https://www.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院</a>共同創辦人</li>
           <li>2016-2022 近期授課經驗：<a href="https://www.hexschool.com/courses/vue-training.html" target="_blank" rel="noreferrer">Vue 3 直播班講師</a>、<a href="https://www.youtube.com/watch?v=qRZLtIcPdls&list=RDCMUC-b2nGm0xLzic38Byti0VjA&start_radio=1" target="_blank" rel="noreferrer noopener">從 Figma 到 VSCode，設計做到網頁切版</a></li>
@@ -97,7 +97,7 @@ if (rocketPage) {
           <li>研討會經驗-經驗豐富的技術開發者 2017 Modern Web 技術講者</li>
           <li>2021 {Laravel x Vue} Conf 技術講者</li>
           <li>五屆 IT 鐵人賽優選</li>
-          <li>技術 Blog - 卡斯伯前端</li>
+          <li><a href="https://www.casper.tw/">技術 Blog - 卡斯伯前端</a></li>
       </ul>`;
 
   cardContainer.addEventListener("click", (e) => {
@@ -118,8 +118,8 @@ if (rocketPage) {
       case "weijie":
         coachDes.innerHTML = coachWeijie;
         break;
-      case "yinmin":
-        coachDes.innerHTML = coachYinmin;
+      case "dennis":
+        coachDes.innerHTML = coachDennis;
         break;
       case "justin":
         coachDes.innerHTML = coachJustin;
@@ -168,7 +168,7 @@ if (rocketPage) {
   swiper_coach.on("slideChange", function () {
     const coachObj = [
       { activeIndex: 0, text: coachWeijie, dataName: "weijie" },
-      { activeIndex: 1, text: coachYinmin, dataName: "yinmin" },
+      { activeIndex: 1, text: coachDennis, dataName: "dennis" },
       { activeIndex: 2, text: coachJustin, dataName: "justin" },
       { activeIndex: 3, text: coachCasper, dataName: "casper" },
     ];

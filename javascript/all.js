@@ -39,7 +39,7 @@ if (rocketPage) {
   const cardContainer = document.querySelector(".coach_card_container_inside");
   const coachCard = [...cardContainer.children];
   const coachDes = document.querySelector(".coach_description");
-  const coachWeijie = `<h4>JS 組教練 | 廖洧杰</h4>
+  const coachWeijie = `<h4>產品教練 | 廖洧杰</h4>
       <ul>
           <li>
               2016-2022 過往經歷：<a href="https://www.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院校長</a>、<a href="https://www.facebook.com/%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%9F%B9%E8%A8%93%E7%87%9F-113926539963626" target="_blank" rel="noreferrer noopener">高雄火箭隊</a>前端教練
@@ -49,14 +49,14 @@ if (rocketPage) {
           <li>2014-2019 線下授課：<a href="https://www.im.nuk.edu.tw/?page_id=95" target="_blank" rel="noreferrer noopener">高雄大學前端領域兼任講師</a></li>
           <li>2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統</li>
       </ul>`;
-  const coachDennis = `<h4>JS 組教練 | 阿劍</h4>
+  const coachDennis = `<h4>技術教練 | 阿劍</h4>
           <ul>
               <li>資深前端工程師</li>
               <li>六角學院｜Node.js 企業專題教練長</li>
               <li>YS 青年職涯發展中心｜活動講師</li>
               <li>勞動部｜GitHub Actions CI/CD 自動化與 AI 協作實務班講師</li>
       </ul>`;
-  const coachJustin = `<h4>後端教練 | 賈斯汀</h4>
+  const coachJustin = `<h4>技術教練 | 賈斯汀</h4>
       <ul>
           <li>高雄市警察局縣市合併內外部整合</li>
           <li>嘉義縣警察局全球資訊網與內部知識網</li>
@@ -86,7 +86,7 @@ if (rocketPage) {
           <li>行政院南區服務中心網站</li>
           <li>經濟部水利署南區水資源局 105 年度業務及全球資訊網站維護及功能擴充計畫</li>
       </ul>`;
-  const coachCasper = `<h4>專題教練 | 卡斯伯</h4>
+  const coachCasper = `<h4>技術教練 | 卡斯伯</h4>
       <ul>
           <li>2016-2022 過往經歷：<a href="https://www.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院</a>共同創辦人</li>
           <li>2016-2022 近期授課經驗：<a href="https://www.hexschool.com/courses/vue-training.html" target="_blank" rel="noreferrer">Vue 3 直播班講師</a>、<a href="https://www.youtube.com/watch?v=qRZLtIcPdls&list=RDCMUC-b2nGm0xLzic38Byti0VjA&start_radio=1" target="_blank" rel="noreferrer noopener">從 Figma 到 VSCode，設計做到網頁切版</a></li>
@@ -167,8 +167,8 @@ if (rocketPage) {
 
   swiper_coach.on("slideChange", function () {
     const coachObj = [
-      { activeIndex: 0, text: coachWeijie, dataName: "weijie" },
-      { activeIndex: 1, text: coachDennis, dataName: "dennis" },
+      { activeIndex: 0, text: coachDennis, dataName: "dennis" },
+      { activeIndex: 1, text: coachWeijie, dataName: "weijie" },
       { activeIndex: 2, text: coachJustin, dataName: "justin" },
       { activeIndex: 3, text: coachCasper, dataName: "casper" },
     ];

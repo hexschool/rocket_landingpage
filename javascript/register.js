@@ -88,13 +88,13 @@ const faqAry = [
       {
         id: 1,
         question: "請問參加培訓需要費用嗎？",
-        answer: `課程免費。你要付兩樣：場地費 ( $${price} / Month )，加上自己的 Claude 訂閱（前 3 個月約 600，之後約 3,000）。`,
+        answer: `培訓過程全部免費，只收場地費 ( $${price} / Month )，AI 額度自備。`,
       },
       {
         id: 2,
-        question: "為什麼要自己訂 Claude？",
+        question: "AI 額度為什麼要自備？",
         answer:
-          "產品組用 AI 寫程式，Claude 就是你的工具。帳號和額度都是你的，離開火箭隊後也能繼續用。",
+          "產品組用 AI 寫程式，AI 就是你的工具。帳號和額度都是你的，離開火箭隊後也能繼續用。",
       },
       {
         id: 3,

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
   <head>
-    <title>Bootcamp Rocket</title>
+    <title>火箭隊培訓營｜第 24 梯 產品組</title>
     <link rel="icon" type="image/svg" href="./image/rocket.ico" />
 
     <!-- meta og -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="火箭隊軟體培訓營" />
+    <meta name="description" content="火箭隊第 24 梯 產品組：不用會寫程式，在高雄用 AI 做出你自己的產品。培訓免費，場地費每月 1,200 元，AI 額度自付（每月 600 元起），2026/11/30 開放報名，到 2027/01/04。" />
     <meta name="copyright" content="火箭隊軟體培訓營" />
-    <meta property="og:title" content="火箭隊軟體培訓營" />
+    <meta property="og:title" content="火箭隊培訓營｜第 24 梯 產品組" />
     <meta
       property="og:image"
-      content="https://github.com/hexschool/rocket_landingpage/blob/main/image/rocket_og.png?raw=true"
+      content="https://www.rocket-coding.com/image/rocket_og_v2.png"
     />
     <meta
       property="og:description"
-      content="火箭隊位於高雄的工程師培訓營，針對市場急需的軟體工程師、後端工程師職缺而設。"
+      content="火箭隊第 24 梯 產品組：不用會寫程式，在高雄用 AI 做出你自己的產品。培訓免費，場地費每月 1,200 元，AI 額度自付（每月 600 元起），2026/11/30 開放報名，到 2027/01/04。"
     />
 
     <!-- import -->
@@ -27,321 +27,618 @@
       defer
     ></script>
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- project -->
     <link rel="stylesheet" href="./css/all.css" />
     <script src="./javascript/all.js" defer></script>
     <script src="./javascript/register.js" defer></script>
   </head>
-  <body>
-    <div id="marquee">
-      <div class="container first">
-        <span class="marquee_item">Let’s join</span>
-        <span class="marquee_item">- 火箭隊培訓營 Rocket -</span>
-        <span class="marquee_item">- 共同空間 Co-working space -</span>
-        <span class="marquee_item">Let’s join</span>
-        <span class="marquee_item">- 火箭隊培訓營 Rocket -</span>
-        <span class="marquee_item">- 共同空間 Co-working space -</span>
-        <span class="marquee_item">Let’s join</span>
-        <span class="marquee_item">- 火箭隊培訓營 Rocket -</span>
-        <span class="marquee_item">- 共同空間 Co-working space -</span>
-      </div>
-      <div class="container second">
-        <span class="marquee_item">Let’s join</span>
-        <span class="marquee_item">- 火箭隊培訓營 Rocket -</span>
-        <span class="marquee_item">- 共同空間 Co-working space -</span>
-        <span class="marquee_item">Let’s join</span>
-        <span class="marquee_item">- 火箭隊培訓營 Rocket -</span>
-        <span class="marquee_item">- 共同空間 Co-working space -</span>
-        <span class="marquee_item">Let’s join</span>
-        <span class="marquee_item">- 火箭隊培訓營 Rocket -</span>
-        <span class="marquee_item">- 共同空間 Co-working space -</span>
-      </div>
+  <body class="theme_neko">
+    <div id="marquee" class="topbar25">
+      <p class="topbar25_text">
+        <b>第 24 梯 產品組</b><span><span class="neko_nowrap">11/30（一）開放報名，</span><span class="neko_nowrap">1/4（一）截止</span></span>
+      </p>
+      <a
+        class="neko_btn neko_btn_sm"
+        href="https://register.rocket-coding.com/"
+        target="_blank"
+        rel="noreferrer noopener"
+        >馬上報名 →</a
+      >
     </div>
     <main class="rocket_page">
-      <div id="banner">
-        <div class="container_sm banner_container">
-          <a class="enter_card rocket active" href="#about_rocket">
-            <div class="card_container">
-              <div class="card_title">
-                <h2 class="card_title_tw">火箭隊</h2>
-                <p class="card_title_en">Bootcamp Rocket</p>
-                <img
-                  class="card_img"
-                  src="./image/banner/banner-logo-rocket-lg.png"
-                  alt="banner-logo-rocket-lg"
-                />
-              </div>
-              <ul class="hashtag">
-                <li># 軟體工程師培訓營</li>
-                <li># 全程免費的扎實訓練</li>
-                <li># 帶你翻轉人生！</li>
-              </ul>
-            </div>
-
-            <div class="enter_btn"></div>
-          </a>
-          <div class="deco_cross">X</div>
-          <a href="./coworking_space.html" class="enter_card space" target="_blank" rel="noreferrer">
-            <div class="card_container">
-              <div class="card_title">
-                <h2 class="card_title_tw">共同空間</h2>
-                <p class="card_title_en">Co-working Space</p>
-                <img
-                  class="card_img"
-                  src="./image/banner/banner-logo-coworking-lg.png"
-                  alt="banner-logo-coworking-lg"
-                />
-              </div>
-              <ul class="hashtag">
-                <li># 超 chill 的共同工作場域</li>
-                <li># 餅乾、零食、茶水應有盡有</li>
-                <li># 等你來一同交流成長</li>
-              </ul>
-            </div>
-            <div class="shape"></div>
-            <div class="enter_btn"></div>
-          </a>
-        </div>
-      </div>
-      <div id="about_rocket">
-        <div class="container_lg about_container">
-          <div class="summary">
-            <p class="summary_title_en">About Rocket</p>
-            <h1 class="summary_title_tw">什麼是火箭隊</h1>
-            <p class="summary_description">
-              火箭隊位於高雄的工程師培訓營，針對市場急需的軟體工程師、後端工程師職缺而設。為期<span class="bold_style"
-                >七個月的免費課程，</span
+      <section id="hero25">
+        <div class="neko_wrap">
+          <div class="hero25_bar">
+            <a class="hero25_brand" href="#hero25">
+              <img src="./image/banner/logo-rocket.png" alt="火箭隊 logo" />
+              火箭隊培訓營
+            </a>
+            <nav class="hero25_nav">
+              <a
+                class="hero25_link is-desktop"
+                href="./coworking_space.html"
+                target="_blank"
+                rel="noreferrer"
+                >共同空間 →</a
               >
-              學員全程參與，<span class="bold_style">僅需支付場地費。</span>
-            </p>
-            <p class="summary_description">
-              火箭隊培育具備問題解決能力的專業人才，滿足企業需求。透過教練的觀察與協助，學員將建立階段性目標，確保技能成長。加入火箭隊，您將獲得實戰經驗，迅速融入職場，並滿足市場對高品質工程師的渴求。
-            </p>
+              <a class="hero25_link" href="#faq">常見問題</a>
+            </nav>
           </div>
-          <div class="card_container_outside">
-            <ul class="card_container">
-              <li class="career_card">
-                <div class="career_text">
-                  <div class="career_text_start">
-                    <h3>JavaScript 軟體工程師</h3>
-                    <ul class="skills">
-                      <li>JavaScript</li>
-                      <li>Node.js</li>
-                    </ul>
-                  </div>
-                  <p class="title_en">JavaScript engineer</p>
-                </div>
-                <div class="career_img">
-                  <img
-                    src="./image/about_rocket/about-rocket-frontend.png"
-                    alt="about-rocket-frontend"
-                  />
-                </div>
-              </li>
-              <li class="career_card">
-                <div class="career_text">
-                  <div class="career_text_start">
-                    <h3>後端工程師</h3>
-                    <ul class="skills">
-                      <li>C#</li>
-                      <li>Net</li>
-                    </ul>
-                  </div>
-                  <p class="title_en">Back-end engineer</p>
-                </div>
-                <div class="career_img">
-                  <img
-                    src="./image/about_rocket/about-rocket-backend.png"
-                    alt="about-rocket-backend"
-                  />
-                </div>
-              </li>
-              
-            </ul>
+          <div class="hero25_main">
+            <div class="hero25_text">
+              <p class="neko_kicker">第 24 梯・產品組</p>
+              <h1 class="hero25_title">來營隊，<br />做你<em>自己的產品</em></h1>
+              <p class="hero25_lead">
+                <b>不用會寫程式，也不用先想好題目。</b><br />花半年，週一到週五全天在高雄基地，<span
+                  class="neko_nowrap"
+                  >用 AI 把你的產品做出來。</span
+                >
+              </p>
+              <ul class="hero25_chips">
+                <li class="is-hot"># 報名 11/30～1/4</li>
+                <li># 11/30 晚上線上說明會</li>
+                <li># 2027/03/02 報到</li>
+                <li># 一梯 8 人</li>
+                <li># 培訓免費・場地費每月 1,200 元</li>
+                <li># AI 額度自付</li>
+              </ul>
+              <div class="hero25_cta">
+                <a
+                  class="neko_btn neko_btn_primary"
+                  href="https://register.rocket-coding.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >馬上報名 →</a
+                >
+                <a class="neko_btn" href="#timeline25">看報名時程</a>
+              </div>
+              <p class="neko_cta_note">
+                報名表裡最重要的，是寫下你為什麼想來。1/7（四）寄面試通知信，<span
+                  class="neko_nowrap"
+                  >記得在期限內回覆。</span
+                >
+              </p>
+            </div>
+            <div class="hero25_orbit" aria-hidden="true">
+              <span class="hero25_star s1">✦</span>
+              <span class="hero25_star s2">✦</span>
+              <span class="hero25_star s3">✦</span>
+              <span class="hero25_sat"></span>
+              <img src="./image/banner/logo-rocket.png" alt="" />
+              <p class="hero25_tag t1"><small>第一個半年</small>產品上線</p>
+              <p class="hero25_tag t2"><small>而且</small>有真人用過</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="success_case">
-        <div class="case_container">
-          <h2>成功案例</h2>
-          <div class="case_card_container swiper success_case_swiper">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket1.jpg" alt="rocket1" />
-                <p class="case_title">FIND TRIP</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket2.png" alt="rocket2" />
-                <p class="case_title">日日照你</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket3.jpg" alt="rocket3" />
-                <p class="case_title">電子發票開立全新體驗</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket4.jpg" alt="rocket4" />
-                <p class="case_title">寵物坊城市</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket5.png" alt="rocket5" />
-                <p class="case_title">樂髮手作</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket6.jpg" alt="rocket6" />
-                <p class="case_title">腦塞 PROJECT</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket7.jpg" alt="rocket7" />
-                <p class="case_title">品辰歲月</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket8.jpg" alt="rocket8" />
-                <p class="case_title">拍拍</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket9.png" alt="rocket9" />
-                <p class="case_title">法學電波</p>
-              </li>
-              <li class="swiper-slide">
-                <img src="./image/success_case/rocket10.png" alt="rocket10" />
-                <p class="case_title">Travel maker</p>
-              </li>
-            </ul>
+      </section>
+      <section id="live25">
+        <div class="neko_wrap live25">
+          <div class="live25_text">
+            <p class="neko_kicker">還在考慮？先來聽說明會</p>
+            <h2 class="neko_h2">11/30（一）晚上 8 點<br />線上說明會</h2>
+            <p class="live25_lead">
+              20:00～22:00 在 YouTube 直播，<span class="neko_nowrap">不用到高雄，</span><span class="neko_nowrap">報名前可以先來聽聽看。</span>
+            </p>
+            <a
+              class="neko_btn"
+              href="https://youtube.com/live/_VEXznF7KH8"
+              target="_blank"
+              rel="noreferrer noopener"
+              >到 YouTube 看直播 →</a
+            >
+          </div>
+          <div class="live25_video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/_VEXznF7KH8"
+              title="火箭隊第 24 梯產品組線上說明會"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
-      </div>
-      <div id="training">
-        <div class="training_container">
-          <h2>關於培訓</h2>
-          <div class="new_batch">
-            <p class="new_batch_title">近期梯次</p>
-            <div class="new_batch_ticker"></div>
-          </div>
-          <ul class="career_card_container">
-            <li class="career_card">
-              <div class="card_content_container">
-                <div class="career_card_title">
-                  <h3>JavaScript 軟體工程師</h3>
-                </div>
-                <div class="card_content">
-                  <div class="card_content_content">
-                    <h4>關於 JavaScript 軟體工程師</h4>
-                    <p>
-                      主要專精 JavaScript 前端 (40%)、後端 (40%)、DevOps
-                      開發運維(20%) 開發，投入語言為 JavaScript，<span
-                        class="mark_style"
-                        >適合有一些 JS 基礎的學員報名</span
-                      >。
-                    </p>
-                  </div>
-                  <div class="card_content_content">
-                    <h4>應徵門檻</h4>
-                    <ol>
-                      <li>
-                        (必要)
-                        <span class="mark_style"
-                          >了解 JS 變數、陣列物件、DOM、監聽、AJAX 等知識</span
-                        >，尚未熟練也沒關係。在履歷上需附近期寫過的 JS
-                        Code，Codepen、GitHub Pages 皆可，或是分享目前
-                        <a
-                          href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8"
-                          target="_blank" 
-                          rel="noreferrer noopener"
-                          >freeCodeCamp</a
-                        >
-                        的 JS 研究進度。
-                      </li>
-                      <li>
-                        (非必要) 會用 CSS Flexbox 排過網頁，有 RWD
-                        響應式網頁概念。
-                      </li>
-                    </ol>
-                  </div>
-                  <div class="card_content_content">
-                    <h4>學習關鍵字</h4>
-                    <ol>
-                      <li>前端技能：React、TypeScript、Next.js</li>
-                      <li>後端技能：Node.js、express、PostgreSQL、CI/CD</li>
-                      <li>
-                        雲服務管理：AWS EC2、S3、RDS、Redis、Load
-                        Balancing、Cloud watch
-                      </li>
-                      <li>容器化技術：Docker</li>
-                      <li>可視化監控：Grafana、Datadog</li>
-                    </ol>
-                  </div>
-                </div>
-                <div class="card_img">
-                  <img
-                    src="./image/training/training-img-frontend-lg.png"
-                    alt="training-img-frontend-lg"
-                  />
-                </div>
-              </div>
+      </section>
+      <div id="about_rocket">
+        <div class="neko_wrap">
+          <p class="neko_kicker">About Rocket・誰適合來</p>
+          <h2 class="neko_h2">你是哪一種？</h2>
+          <p class="about25_lead">
+            火箭隊是高雄的實體營隊。現在程式可以交給 AI 寫，我們把重點放在<b>把產品做出來</b>：半年全天到基地，跟一群人一起做你自己的產品。半年到了，由你決定要不要繼續做。
+          </p>
+          <ul class="persona25">
+            <li class="persona25_card">
+              <img
+                class="persona25_img"
+                src="./image/about_rocket/persona25-idea.jpg"
+                alt="一個人在筆電前想到點子，開心握拳"
+              />
+              <span class="persona25_no">1</span>
+              <h3>有自己點子的人</h3>
+              <p>腦中有個東西一直想做，缺的是把它做出來。</p>
+              <ul class="persona25_tags">
+                <li>做出來</li>
+                <li>上線</li>
+              </ul>
             </li>
-            <li class="career_card">
-              <div class="career_card_title">
-                <h3>後端工程師</h3>
-              </div>
-              <div class="card_content_container">
-                <div class="card_img">
-                  <img
-                    src="./image/training/training-img-backend-lg.png"
-                    alt="training-img-backend-lg"
-                  />
-                </div>
-                <div class="card_content">
-                  <div class="card_content_content">
-                    <h4>關於後端</h4>
-                    <p>
-                      後端工程師組主要專注為後端開發，投入後端語言為
-                      <span class="mark_style"
-                        >C#、.Net，適合無程式背景的學員報名</span
-                      >。
-                    </p>
-                  </div>
-                  <div class="card_content_content">
-                    <h4>學習關鍵字</h4>
-                    <ol>
-                      <li>後端語言：C#</li>
-                      <li>程式架構：ASP.NET Web Form、ASP.NET MVC、Web API</li>
-                      <li>資料庫與雲端主機：MSSQL、Microsoft Azure</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
+            <li class="persona25_card">
+              <img
+                class="persona25_img"
+                src="./image/about_rocket/persona25-family.jpg"
+                alt="年輕人在自家店裡拿平板給長輩看自己做的工具"
+              />
+              <span class="persona25_no">2</span>
+              <h3>家裡就是公司的人</h3>
+              <p>幫家裡做一個工具，員工和客人就是第一批使用者。</p>
+              <ul class="persona25_tags">
+                <li>預約</li>
+                <li>庫存</li>
+                <li>客戶管理</li>
+              </ul>
             </li>
-            
+            <li class="persona25_card">
+              <img
+                class="persona25_img"
+                src="./image/about_rocket/persona25-tech.jpg"
+                alt="年輕人在成果發表台上介紹自己做的產品"
+              />
+              <span class="persona25_no">3</span>
+              <h3>想進科技業的人</h3>
+              <p>做出來的產品就是作品集，合作廠商來成果發表看人。</p>
+              <ul class="persona25_tags">
+                <li>作品集</li>
+                <li>成果發表</li>
+              </ul>
+            </li>
           </ul>
+          <p class="persona25_more">
+            <b>還沒有題目？</b>也可以報名。進營隊後，產品教練會陪你一起選題。
+          </p>
+        </div>
+      </div>
+      <section id="stuck25">
+        <div class="neko_wrap">
+          <p class="neko_kicker">一個人做產品</p>
+          <h2 class="neko_h2">多半卡在這三個地方</h2>
+          <ul class="stuck25">
+            <li class="stuck25_row">
+              <figure class="stuck25_art">
+                <img
+                  src="./image/stuck25/stuck-alone.jpg"
+                  alt="深夜一個人對著滿螢幕錯誤訊息抓頭，身邊沒有人可以問"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="stuck25_body">
+                <div class="stuck25_pain">
+                  <span class="stuck25_mark" aria-hidden="true">✕</span>
+                  <p class="stuck25_label">卡在</p>
+                  <h3>沒人陪</h3>
+                  <p class="stuck25_note">卡住了沒人可以問，<span class="neko_nowrap">做到一半就停了。</span></p>
+                </div>
+                <div class="stuck25_fix">
+                  <span class="stuck25_mark" aria-hidden="true">✓</span>
+                  <p class="stuck25_label">火箭隊給你</p>
+                  <h3>一群人</h3>
+                  <p class="stuck25_note">同一天報到的同一批人，一起做半年。卡住了，轉頭就有人可以問。</p>
+                </div>
+              </div>
+            </li>
+            <li class="stuck25_row">
+              <figure class="stuck25_art">
+                <img
+                  src="./image/stuck25/stuck-home.jpg"
+                  alt="在家沙發上想做事，貓跳上鍵盤、電視開著、衣服還沒摺"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="stuck25_body">
+                <div class="stuck25_pain">
+                  <span class="stuck25_mark" aria-hidden="true">✕</span>
+                  <p class="stuck25_label">卡在</p>
+                  <h3>沒地方</h3>
+                  <p class="stuck25_note">在家做，很難每天坐下來。</p>
+                </div>
+                <div class="stuck25_fix">
+                  <span class="stuck25_mark" aria-hidden="true">✓</span>
+                  <p class="stuck25_label">火箭隊給你</p>
+                  <h3>一個地方</h3>
+                  <p class="stuck25_note">高雄基地，週一到週五全天都有你的位子。</p>
+                </div>
+              </div>
+            </li>
+            <li class="stuck25_row">
+              <figure class="stuck25_art">
+                <img
+                  src="./image/stuck25/stuck-tired.jpg"
+                  alt="下班後累到趴在筆電前睡著，月曆一頁頁翻過去"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="stuck25_body">
+                <div class="stuck25_pain">
+                  <span class="stuck25_mark" aria-hidden="true">✕</span>
+                  <p class="stuck25_label">卡在</p>
+                  <h3>撐不久</h3>
+                  <p class="stuck25_note">下班後才做，幾週就停了。</p>
+                </div>
+                <div class="stuck25_fix">
+                  <span class="stuck25_mark" aria-hidden="true">✓</span>
+                  <p class="stuck25_label">火箭隊給你</p>
+                  <h3>一段完整的時間</h3>
+                  <p class="stuck25_note">半年全天做同一件事，從選題一路做到成果發表。</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="base25">
+        <div class="neko_wrap base25">
+          <div class="base25_text">
+            <p class="neko_kicker">高雄基地・捷運信義國小站附近</p>
+            <h2 class="neko_h2">週一到週五，<br />這裡都有你的位子</h2>
+            <p class="base25_lead">
+              不用在家跟沙發、電視搶專心，<span class="neko_nowrap">早上九點進來就能開工。</span>
+            </p>
+            <ul class="base25_facts">
+              <li><b>地址</b><span>高雄市新興區<span class="neko_nowrap">民生一路56號2樓之2</span></span></li>
+              <li><b>09:00～18:00</b><span>週一到週五全天開放</span></li>
+              <li><b>一批一起進場</b><span>同一天報到的同一批人</span></li>
+              <li><b>討論區・休憩區</b><span>討論、休息都有地方</span></li>
+            </ul>
+          </div>
+          <div class="base25_photos">
+            <figure class="base25_photo is-main">
+              <img
+                src="./image/base25/base-desks.jpg"
+                alt="基地的座位區，一排排長桌和電腦椅，窗邊有大片玻璃"
+                loading="lazy"
+              />
+              <figcaption>座位區</figcaption>
+            </figure>
+            <figure class="base25_photo">
+              <img
+                src="./image/base25/base-sofa.jpg"
+                alt="基地的沙發討論區，木頭長桌配沙發座"
+                loading="lazy"
+              />
+              <figcaption>沙發討論區</figcaption>
+            </figure>
+            <figure class="base25_photo">
+              <img
+                src="./image/base25/base-rest.jpg"
+                alt="基地窗邊的吧台座位和休憩區"
+                loading="lazy"
+              />
+              <figcaption>休憩區</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="skills25">
+        <div class="neko_wrap">
+          <div class="skills25_layout">
+          <div class="skills25_intro">
+          <p class="neko_kicker">半年時間</p>
+          <h2 class="neko_h2">你會解鎖哪些技能？</h2>
+          <p class="skills25_lead">
+            不用先會寫程式。程式交給 AI 寫，教練幫你顧資料庫、權限、部署這些 AI
+            常出包的地方。
+          </p>
+          <p class="skills25_hint">
+            路線上的英文是會用到的工具名字。現在看不懂沒關係，做到那一步，教練會帶你用。
+          </p>
+          <figure class="skills25_art">
+            <img
+              src="./image/skills25/build-with-ai.jpg"
+              alt="一個人指揮、小機器人在筆電前打字，一起把網頁、資料庫、雲端和數據圖組成一個產品"
+              loading="lazy"
+            />
+          </figure>
+          </div>
+          <ol class="skills25">
+            <li class="skills25_step">
+              <span class="skills25_no" aria-hidden="true">1</span>
+              <h3>AI 開發</h3>
+              <p>用 AI 把你的想法寫成程式</p>
+              <ul class="skills25_tools">
+                <li>Claude Code</li>
+                <li>先寫規格，再交給 AI 做</li>
+              </ul>
+            </li>
+            <li class="skills25_step">
+              <span class="skills25_no" aria-hidden="true">2</span>
+              <h3>產品技術</h3>
+              <p>做出畫面、後端和資料庫</p>
+              <ul class="skills25_tools">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </li>
+            <li class="skills25_step">
+              <span class="skills25_no" aria-hidden="true">3</span>
+              <h3>上線部署</h3>
+              <p>把產品放到網路上，讓別人用得到</p>
+              <ul class="skills25_tools">
+                <li>Cloudflare</li>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </li>
+            <li class="skills25_step">
+              <span class="skills25_no" aria-hidden="true">4</span>
+              <h3>產品數據</h3>
+              <p>看有多少人在用、從哪裡來</p>
+              <ul class="skills25_tools">
+                <li>GA4</li>
+                <li>Google Search Console</li>
+              </ul>
+            </li>
+            <li class="skills25_end">
+              <p class="skills25_goal">
+                <span class="skills25_flag" aria-hidden="true">⚑</span>
+                終點：產品上線，而且有真人用過
+              </p>
+            </li>
+          </ol>
+          </div>
+        </div>
+      </section>
+      <section id="timeline25">
+        <div class="neko_wrap tl25_layout">
+          <div class="tl25_intro">
+            <p class="neko_kicker">Timeline・從報名到成果發表</p>
+            <h2 class="neko_h2">什麼時候，要做什麼</h2>
+            <p class="tl25_months"><b>6</b><span>個月</span></p>
+            <p class="tl25_range">
+              2027/03/02 報到 → 2027/08/31 成果發表<br />
+              第一個半年做完、發表完，<span class="neko_nowrap">再決定要不要繼續。</span>
+            </p>
+            <div class="tl25_cta">
+              <a
+                class="neko_btn neko_btn_primary"
+                href="https://register.rocket-coding.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                >馬上報名 →</a
+              >
+              <p class="neko_cta_note">11/30（一）開放報名，到 2027/01/04（一）23:59</p>
+            </div>
+          </div>
+          <ol class="tl25">
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2026/11/30（一）</p>
+              <h3 class="tl25_title">開放報名</h3>
+              <p class="tl25_note">這天起可以送出報名表</p>
+            </li>
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2026/11/30（一）</p>
+              <h3 class="tl25_title">線上說明會</h3>
+              <p class="tl25_note">20:00～22:00，<a href="https://youtube.com/live/_VEXznF7KH8" target="_blank" rel="noreferrer noopener">到 YouTube 看直播 →</a></p>
+            </li>
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2027/01/04（一）</p>
+              <h3 class="tl25_title">報名截止</h3>
+              <p class="tl25_note">23:59 前送出報名表</p>
+            </li>
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2027/01/07（四）</p>
+              <h3 class="tl25_title">寄面試通知信</h3>
+              <p class="tl25_note">收到後，照信上的期限回覆</p>
+            </li>
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2027/01/12（二）</p>
+              <h3 class="tl25_title">面試</h3>
+              <p class="tl25_note">
+                10:00～14:00 分時段，<span class="neko_nowrap">高雄基地。</span
+                ><span class="neko_nowrap">細節寫在面試通知信裡</span>
+              </p>
+            </li>
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2027/01/15（五）</p>
+              <h3 class="tl25_title">寄錄取通知</h3>
+              <p class="tl25_note">用 Email 通知</p>
+            </li>
+            <li class="tl25_item is-key">
+              <span class="tl25_dot" aria-hidden="true">★</span>
+              <p class="tl25_date">2027/03/02（二）</p>
+              <h3 class="tl25_title">報到</h3>
+              <p class="tl25_note">同一批人一起進場，<span class="neko_nowrap">開始第一個半年</span></p>
+            </li>
+            <li class="tl25_item is-goal">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">3 月～8 月</p>
+              <h3 class="tl25_title">做你自己的產品</h3>
+              <p class="tl25_note">目標：產品上線，而且有真人用過</p>
+            </li>
+            <li class="tl25_item">
+              <span class="tl25_dot" aria-hidden="true"></span>
+              <p class="tl25_date">2027/08/31（二）</p>
+              <h3 class="tl25_title">成果發表</h3>
+              <p class="tl25_note">發表完，你可以決定繼續做產品，<span class="neko_nowrap">或離開</span></p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <div id="training">
+        <!-- 報名條件移到費用下面（#apply25） -->
+        <section class="coach25">
+          <div class="neko_wrap">
+            <p class="neko_kicker">教練怎麼帶</p>
+            <h2 class="neko_h2">兩種教練，各顧一半</h2>
+            <div class="coach25_split">
+              <div class="coach25_half">
+                <p class="coach25_role">技術教練</p>
+                <h3>做得出來、<br />上線不出事</h3>
+                <p class="coach25_text">
+                  程式交給 AI 寫，技術教練顧 AI 常出包的地方。
+                </p>
+                <ul class="coach25_tags">
+                  <li>資料庫</li>
+                  <li>權限</li>
+                  <li>部署</li>
+                </ul>
+                <p class="coach25_who">阿劍・賈斯汀・卡斯伯</p>
+              </div>
+              <p class="coach25_plus" aria-hidden="true">＋</p>
+              <div class="coach25_half is-prod">
+                <p class="coach25_role">產品教練</p>
+                <h3>做的東西<br />有沒有人要</h3>
+                <p class="coach25_text">從選題開始，陪你找到第一批使用者。</p>
+                <ul class="coach25_tags">
+                  <li>選題</li>
+                  <li>找第一批使用者</li>
+                  <li>看數據</li>
+                  <li>決定下一步</li>
+                </ul>
+                <p class="coach25_who">廖洧杰</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="results25">
+          <div class="neko_wrap">
+            <p class="neko_kicker">教練和六角團隊・自己做出來的</p>
+            <h2 class="neko_h2">我們自己做出來，<span class="neko_nowrap">長這樣</span></h2>
+            <p class="results25_note">
+              下面是火箭隊教練洧杰、卡斯伯，和六角同事 Ray 自己的產品與經歷，不代表學員的結果。
+            </p>
+            <ul class="results25_nums">
+              <li class="results25_row">
+                <div class="results25_figure">
+                  <p class="results25_want"><span class="results25_idx">01</span>想做大家天天用的網站</p>
+                  <p class="results25_big"><small>貓掌工具箱・月流量</small>60 萬<span>+</span></p>
+                </div>
+                <div class="results25_who">
+                  <div class="results25_meta">
+                    <img
+                      class="results25_logo"
+                      src="./image/results25/toolneko-icon.png"
+                      alt="貓掌工具箱的 LOGO"
+                    />
+                    <img
+                      class="results25_ava"
+                      src="./image/results25/liao.png"
+                      alt="廖洧杰的大頭照"
+                    />
+                    <div>
+                      <p><b>廖洧杰</b><span class="results25_role">產品教練</span></p>
+                      <p class="results25_bits">貓掌工具箱・<span class="neko_nowrap">Google 廣告</span></p>
+                    </div>
+                  </div>
+                  <a
+                    class="results25_link"
+                    href="https://toolneko.com/zh-tw/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >看貓掌工具箱 →</a
+                  >
+                </div>
+              </li>
+              <li class="results25_row">
+                <div class="results25_figure">
+                  <p class="results25_want"><span class="results25_idx">02</span>想做每天有人打開的 App</p>
+                  <p class="results25_big"><small>步步狐・日活躍人數</small>6,000</p>
+                </div>
+                <div class="results25_who">
+                  <div class="results25_meta">
+                    <img
+                      class="results25_logo"
+                      src="./image/results25/bubu-icon.png"
+                      alt="步步狐的 App 圖示"
+                    />
+                    <img
+                      class="results25_ava"
+                      src="./image/results25/ray.png"
+                      alt="Ray 的大頭照"
+                    />
+                    <div>
+                      <p><b>Ray</b><span class="results25_role is-staff">六角學院資深軟體工程師</span></p>
+                      <p class="results25_bits">步步狐・訂閱制</p>
+                    </div>
+                  </div>
+                  <a
+                    class="results25_link"
+                    href="https://apps.apple.com/tw/app/id6793779019"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >看步步狐 App →</a
+                  >
+                </div>
+              </li>
+              <li class="results25_row">
+                <div class="results25_figure">
+                  <p class="results25_want"><span class="results25_idx">03</span>想從別的行業轉進科技業</p>
+                  <p class="results25_big is-text"><small>卡斯伯・自己的轉職路線</small>設計師<span>→</span>工程師</p>
+                </div>
+                <div class="results25_who">
+                  <div class="results25_meta">
+                    <img
+                      class="results25_ava is-photo"
+                      src="./image/training/coach-casper-2x.png"
+                      alt="卡斯伯的大頭照"
+                    />
+                    <div>
+                      <p><b>卡斯伯</b><span class="results25_role">技術教練</span></p>
+                      <p class="results25_bits">曾任鴻海軟體工程師・<span class="neko_nowrap">線上課程超過萬人註冊</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="training_container">
           <section class="coach">
             <div class="coach_container">
               <h3>教練團</h3>
+              <p class="coach_hint">
+                <span class="is-desktop">點照片，下面會換成那位教練的介紹</span
+                ><span class="is-mobile">左右滑，看 4 位教練的介紹</span>
+              </p>
               <div class="coach_card_container_outside swiper coach_swiper">
                 <ul class="coach_card_container_inside swiper-wrapper">
-                  <li class="coach_card active swiper-slide" data-coach="dennis">
-                    <img
-                      class="coach_img"
-                      src="./image/training/coach-dennis.png"
-                      alt="coach-dennis"
-                    />
-                    <div class="coach_name">阿劍</div>
-                  </li>
                   <li
-                    class="coach_card swiper-slide"
+                    class="coach_card active swiper-slide"
                     data-coach="weijie"
                   >
                     <img
                       class="coach_img"
                       src="./image/training/coach-weijie-2x.png"
-                      alt="coach-weijie-2x"
+                      alt=""
                     />
                     <div class="coach_name">廖洧杰</div>
+                  </li>
+                  <li class="coach_card swiper-slide" data-coach="dennis">
+                    <img
+                      class="coach_img"
+                      src="./image/training/coach-dennis.png"
+                      alt=""
+                    />
+                    <div class="coach_name">阿劍</div>
                   </li>
                   <li class="coach_card swiper-slide" data-coach="justin">
                     <img
                       class="coach_img"
                       src="./image/training/coach-justin-2x.png"
-                      alt="coach-justin-2x"
+                      alt=""
                     />
                     <div class="coach_name">賈斯汀</div>
                   </li>
@@ -349,24 +646,114 @@
                     <img
                       class="coach_img"
                       src="./image/training/coach-casper-2x.png"
-                      alt="coach-casper-2x"
+                      alt=""
                     />
                     <div class="coach_name">卡斯伯</div>
                   </li>
                 </ul>
+                <div class="swiper-pagination coach_dots"></div>
               </div>
               <section class="coach_description container_sm">
-                <h4>JS 組教練 | 阿劍</h4>
+                <h4>產品教練 | 廖洧杰</h4>
                 <ul>
-                  <li>資深前端工程師</li>
-                  <li>六角學院｜Node.js 企業專題教練長</li>
-                  <li>YS 青年職涯發展中心｜活動講師</li>
-                  <li>勞動部｜GitHub Actions CI/CD 自動化與 AI 協作實務班講師</li>
+                  <li><a href="https://www.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院</a>共同創辦人（2016 年與卡斯伯共同創立）</li>
+                  <li>2023-2026 經歷：六角學院技術講師</li>
+                  <li>
+                    2016-2022 過往經歷：<a href="https://www.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院校長</a>、<a href="https://www.facebook.com/%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%9F%B9%E8%A8%93%E7%87%9F-113926539963626" target="_blank" rel="noreferrer noopener">高雄火箭隊</a>前端教練
+                  </li>
+                  <li>2013-2019 成功案例：協助無資訊背景轉職工程師人數超過 500 位</li>
+                  <li>2013-2019 授課人數：線上+線下授課學員超過 25,000 位</li>
+                  <li>2014-2019 線下授課：<a href="https://www.im.nuk.edu.tw/?page_id=95" target="_blank" rel="noreferrer noopener">高雄大學前端領域兼任講師</a></li>
+                  <li>2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統</li>
                 </ul>
               </section>
             </div>
           </section>
+          <div class="neko_wrap fee25">
+            <div class="fee25_text">
+              <p class="neko_kicker">費用</p>
+              <h2 class="neko_h2">每個月要花多少？</h2>
+              <p class="fee25_lead">
+                培訓不收錢。你每個月付給火箭隊的，只有基地的場地費。
+              </p>
+              <p class="fee25_lead">
+                AI 額度用你自己的 Claude 付費帳號（跟 ChatGPT 類似的 AI 服務），錢直接付給 AI 公司、不經過火箭隊。<b>前 3 個月每月 600 元，後 3 個月每月至少 3,000 元。</b>
+              </p>
+              <p class="fee25_more">
+                <b>另外要準備：自己的筆電，<span class="neko_nowrap">和這半年的生活費。</span></b>
+              </p>
+            </div>
+            <div class="fee25_receipt">
+              <p class="fee25_head">你的每月明細</p>
+              <ul class="fee25_lines">
+                <li>
+                  <span>培訓、兩種教練<small>培訓過程全部免費</small></span>
+                  <b class="is-free">0 元</b>
+                </li>
+                <li>
+                  <span>場地費<small>高雄基地，週一到週五全天</small></span>
+                  <b>1,200 元</b>
+                </li>
+                <li class="is-ai-line">
+                  <span>AI 額度<small>你自己的 Claude 帳號，<span class="neko_nowrap">直接付給 AI 公司</span></small></span>
+                  <b class="is-ai">前 3 個月 600 元<br />後 3 個月至少 3,000 元</b>
+                </li>
+              </ul>
+              <div class="fee25_all">
+                <p class="fee25_all_head">每個月總共（場地費＋AI 額度）</p>
+                <p><span>前 3 個月</span><b>1,800 元</b></p>
+                <p><span>後 3 個月</span><b>至少 4,200 元</b></p>
+                <p class="fee25_all_note">
+                  其中付給火箭隊的只有<span class="neko_nowrap">場地費 1,200 元。</span><span class="neko_nowrap">半年合計至少 18,000 元。</span>
+                </p>
+              </div>
+              <p class="fee25_stamp" aria-hidden="true">培訓<br />免費</p>
+            </div>
+          </div>
+          <section class="neko_wrap apply25" id="apply25">
+            <div class="apply25_text">
+              <p class="neko_kicker">報名條件</p>
+              <h2 class="neko_h2">報名只看<br />兩件事</h2>
+              <p class="apply25_lead">
+                第 24 梯 產品組：2027/03/02（二）報到，先做半年，一梯 8 人。
+              </p>
+              <figure class="apply25_art">
+                <img
+                  src="./image/training/product-team25.jpg"
+                  alt="學員圍著桌子一起做產品，教練在旁邊給建議"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="apply25_cols">
+              <div class="apply25_col is-must">
+                <p class="apply25_badge"><span aria-hidden="true">✓</span>必要</p>
+                <ul>
+                  <li>
+                    <b>寫下你為什麼想來</b>有想做的東西也一起寫。不用成熟，進來後可以換。
+                  </li>
+                  <li>
+                    <b>半年都能週一到週五 09:00～18:00 到高雄基地</b>從 2027/03/02 到 2027/08/31。
+                  </li>
+                </ul>
+              </div>
+              <div class="apply25_col is-no">
+                <p class="apply25_badge"><span aria-hidden="true">—</span>不需要</p>
+                <ul>
+                  <li><b>先想好題目</b>還沒有也沒關係，可以進營隊再來想。</li>
+                  <li><b>會寫程式</b>程式交給 AI 寫，教練帶你。</li>
+                  <li><b>相關學歷</b>學歷和程式基礎都不看。</li>
+                </ul>
+              </div>
+              <p class="apply25_note">
+                <b>提醒</b><span>這半年週一到週五全天在基地，<span class="neko_nowrap">筆電和生活費記得先準備好。</span></span>
+              </p>
+            </div>
+          </section>
           <div class="button_go_container container_sm">
+            <p class="neko_cta_note is-center">
+              2026/11/30（一）開放報名，<span class="neko_nowrap">到 2027/01/04（一）23:59，</span><span class="neko_nowrap">1/7（四）寄面試通知信。</span>
+            </p>
             <a
               class="button_go"
               href="https://register.rocket-coding.com/"
@@ -377,7 +764,7 @@
               <img
                 class="button_img"
                 src="./image/training/ic-go-rocket.svg"
-                alt="ic-go-rocket"
+                alt=""
               />
             </a>
           </div>
@@ -386,6 +773,26 @@
       <div id="faq">
         <div class="container_xs faq_container"></div>
       </div>
+      <section id="cta25">
+        <div class="neko_wrap cta25">
+          <p class="neko_kicker">第 24 梯・產品組</p>
+          <h2 class="neko_h2">想好了，就來報名</h2>
+          <p class="cta25_lead">
+            <b>2026/11/30（一）</b>開放報名，到 <b>2027/01/04（一）23:59</b>。報名表裡寫下你為什麼想來，沒題目也可以。<br />
+            1/7（四）寄面試通知信，記得在期限內回覆。
+          </p>
+          <div class="cta25_btns">
+            <a
+              class="neko_btn neko_btn_primary"
+              href="https://register.rocket-coding.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >馬上報名 →</a
+            >
+            <a class="neko_btn" href="#timeline25">再看一次時程</a>
+          </div>
+        </div>
+      </section>
       <div id="support">
         <div class="support_container">
           <h2>主辦、協辦單位</h2>
@@ -428,19 +835,6 @@
                 <div class="support_text">
                   <p>協辦單位</p>
                   <p>好想工作室</p>
-                </div>
-              </li>
-              <li class="support_card_item">
-                <div class="support_img">
-                  <img
-                    class="zeabur"
-                    src="./image/support/support-zeabur.png"
-                    alt="support-zeabur"
-                  />
-                </div>
-                <div class="support_text">
-                  <p>技術支援</p>
-                  <p>Zeabur</p>
                 </div>
               </li>
               <li class="support_card_item">
@@ -527,7 +921,7 @@
       </div>
     </main>
     <footer>
-      <p>Copyright © 2023</p>
+      <p>Copyright © 2026</p>
       <p>Created by 六角學院 / 火箭隊培訓營</p>
     </footer>
   </body>

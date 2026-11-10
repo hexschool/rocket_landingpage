@@ -1,44 +1,11 @@
 //火箭隊報名資訊和 QA 可以從這一頁改
 
-// 場地收費
+// 場地收費（每月）
 const price = 1200;
+const priceText = price.toLocaleString("en-US");
 
 // 梯次時間
-const batch =
-  "第 24 梯 (2026/08/03~2027/03/03)";
-
-// 報名時間
-const timeline = {
-  title: "報名資訊",
-  content: [
-    {
-      id: 1,
-      question: "預計招生的最近梯次和培訓時間？",
-      answer: `${batch} <br/> (每週一至週五 09:00 AM ~ 18:00 PM 全程參與)`,
-    },
-    {
-      id: 2,
-      question: "預期招募的組別？",
-      answer: "本次招募組別為 C# 後端組、JS 軟體工程師組。",
-    },
-    {
-      id: 3,
-      question: "最新梯次的報名時間？",
-      answer: "即日起 ~ 2026/06/25 (四) 23:59 截止（截止隔日寄面試通知信，需在期限內回覆）。",
-    },
-    {
-      id: 4,
-      question: "什麼時候會進行面試？",
-      answer:
-        "2026/06/30 (二) 10:00~12:00。面試地點為高雄火箭隊培訓營基地（捷運信義國小附近）。",
-    },
-    {
-      id: 5,
-      question: "什麼時候會有錄取通知？",
-      answer: "2026/07/03 (五)，將以 Email 進行通知。",
-    },
-  ],
-};
+const batch = "第 24 梯 產品組（2027/03/02 報到，先做半年）";
 
 // 分享連結內容陣列
 const expLinks = [
@@ -79,179 +46,174 @@ expLinks.forEach((link) => {
   expLinksHtml += linkItem;
 });
 
-//QA 內容陣列，一組最多五個（只有五個 icon）
+//QA 內容陣列（anchor：要從頁面其他地方直接連到某一題時才加）
 const faqAry = [
-  timeline,
   {
-    title: "培訓費用",
+    id: "fit",
+    title: "我適合來嗎？",
     content: [
       {
         id: 1,
-        question: "請問參加培訓需要費用嗎？",
-        answer: `不會有任何費用，僅需要場地費 ( $${price} / Month )，其餘完全免費。`,
+        question: "不會寫程式也可以嗎？",
+        answer:
+          "可以。程式交給 AI 寫，教練幫你顧資料庫、權限、部署這些 AI 常出包的地方。",
       },
       {
         id: 2,
-        question: "你們不是直銷吧？",
-        answer: "不是，不會推銷任何東西。",
+        question: "還沒有想做的題目，可以報名嗎？",
+        answer:
+          "可以。報名表裡最重要的是寫下你為什麼想來；題目可以進營隊再來想，產品教練會陪你一起選。",
       },
       {
         id: 3,
-        question: "你們真的不是詐騙集團？台灣有其他單位做一樣的事了嗎？",
-        answer: `其實在台灣已經有許多單位在做一樣的事了，但絕大部分都在中北部，例如
-        <a
-          href="https://school.appworks.tw/"
-          target="_blank"
-          rel="noreferrer noopener"
-          >AppWorks School</a
-        >、<a
-          href="https://www.programmer101.org/"
-          target="_blank"
-          rel="noreferrer noopener"
-          >CMoney</a
-        >，以及在台南的<a
-          href="https://www.facebook.com/GoodideasStudio/"
-          target="_blank"
-          rel="noreferrer noopener"
-          >好想工作室</a
-        >。一樣也是提供<span class="bold_style">免費培訓</span
-        >。而在高雄，我們是第一個舉辦此培訓營的單位。`,
+        question: "我想幫家裡的公司做一個工具，可以嗎？",
+        answer:
+          "很適合，家裡的員工和客人就是你的第一批使用者。如果你現在就在家裡公司上班，報名前先跟家裡講好這半年。",
+      },
+      {
+        id: 4,
+        question: "我超過 35 歲，之前的工作也都跟資訊無關，有機會嗎？",
+        answer:
+          "沒問題，我們也帶過很多非資訊背景的學員。<b>洧杰</b>自己也是多媒體 3D 設計系出身。",
+      },
+      {
+        id: 5,
+        question: "目前已經有工作，有沒有晚上的梯次呢？",
+        answer:
+          "火箭隊只有白天。只能晚上或週末的人，可以看看六角學院線上的「後端＋AI 工程師培訓班」。",
       },
     ],
   },
   {
-    title: "培訓流程",
+    id: "fee",
+    title: "費用和生活",
     content: [
       {
         id: 1,
-        question: "培訓的時間是多久呢？",
-        answer:
-          "培訓時間為七個月，您可以選擇要投入 JavaScript 軟體工程師、後端工程師。",
+        question: "參加需要費用嗎？",
+        answer: `培訓過程全部免費，只收場地費，每月 ${priceText} 元。AI 額度用你自己的帳號：前 3 個月每月 600 元，後 3 個月每月至少 3,000 元，錢直接付給 AI 公司。筆電也要自備。`,
       },
       {
         id: 2,
-        question: "那如果七個月結訓後，可以續留嗎？",
+        question: "AI 額度要準備多少？要開什麼帳號？",
         answer:
-          "當然可以，我們提供額外的進駐空間供您使用。在這裡，您可以與其他火箭隊夥伴保持緊密交流，分享心得，或者利用此空間接案和進行遠端工作，讓您的技能不斷精進。",
+          "前 3 個月每月 600 元，後 3 個月每月至少 3,000 元，報名前不用先買。產品組用 AI 寫程式，AI 就是你的工具，所以用的是你自己的 Claude 付費帳號（Claude 是 Anthropic 公司的 AI 服務，用法跟 ChatGPT 類似）。錢直接付給 AI 公司、不經過火箭隊。",
       },
       {
         id: 3,
+        anchor: "q-fulltime",
+        question: "可以兼職參加嗎？",
+        answer: "只提供全職，沒有兼職。週一到週五 09:00～18:00 都在基地。",
+      },
+    ],
+  },
+  {
+    id: "how",
+    title: "產品組怎麼運作",
+    content: [
+      {
+        id: 1,
+        question: "半年之後呢？中途可以離開嗎？",
+        answer:
+          "先做半年，沒有結訓。這半年你週一到週五全天到基地做自己的產品，每月付場地費，教練陪你做。半年到了，可以繼續做，或帶著產品離開；做到一半想離開也可以，都由你自己決定。",
+      },
+      {
+        id: 2,
+        question: "做出來的產品是誰的？",
+        answer: "是你的。火箭隊不抽成，你離開時產品跟著你走。",
+      },
+      {
+        id: 3,
+        question: "第一個半年要做到什麼？",
+        answer: "產品上線，而且有真人用過。之後的目標你自己定。",
+      },
+      {
+        id: 4,
+        question: "教練怎麼帶？每週怎麼排？",
+        answer: `技術教練顧<span class="bold_style">「做得出來、上線不出事」</span>；<b>洧杰</b>帶<span class="bold_style">「做的東西有沒有人要」</span>：選題、找第一批使用者、看數據。每週怎麼排，報到前會跟錄取的人說明。`,
+      },
+      {
+        id: 5,
         question: "你們和其他的培訓單位有什麼差異呢？",
-        answer: `我們的培訓流程，主要是將學員培育成<span class="bold_style"
-        >「擁有自我解決問題的工程師」</span
-      >，大部分的實體補習班都會給您一個完整課綱，您照著它走完就結束。但是不論任何工作，出社會才會發現，有很多事情都還是自己不懂的，您必須<span
-        class="bold_style"
-        >了解該如何找出問題癥結點並解決問題</span
-      >。讓您有足夠的搜索與研究能力，自行打造火箭，航向您想去的星球。`,
-      },
-      {
-        id: 4,
-        question: "這麼說來，你們沒有一個完整課綱？",
-        answer: `是的，我們只會針對您當下的狀態，並觀察您需要什麼養分，提供給您<span
-        class="bold_style"
-        >「目標」</span
-      >，您再依照此目標去達成，而我們也會從您研究的過程中，觀察您還需要哪些技術，以達到其目標。舉例來說，您對
-      web layout
-      沒有從零到有的開發經驗，那教練就陪您跑過整個流程，甚至模擬自己是業主，與您討論網站建構流程。或是後端您沒有自己架過郵件伺服器，那教練就會給您建立一個最小可行性的郵件服務，以達成目標。`,
-      },
-      {
-        id: 5,
-        question: "所以有很多的時間都是在自我研究技術？",
         answer:
-          "是的，沒有錯，教練的存在是觀察您目前的狀態，並與您共同建立各階段性的目標，確保您方向沒有走歪，能順遂朝自己的方向邁進。",
+          "一般課程照課綱走完就結束。在這裡你做的是自己的產品，遇到什麼問題就解決什麼問題。",
       },
     ],
   },
   {
-    title: "審核流程",
+    id: "apply",
+    title: "報名和審核",
     content: [
       {
         id: 1,
-        question: "有看到你們招募是審核制，所以有可能會落選？",
-        answer: "是的。",
+        anchor: "q-info",
+        question: "報名前可以先聽說明會嗎？",
+        answer: `可以。2026/11/30（一）20:00～22:00 線上直播，不用到高雄。<a class="faq25_live" href="https://youtube.com/live/_VEXznF7KH8" target="_blank" rel="noreferrer noopener">到 YouTube 看直播 →</a>`,
       },
       {
         id: 2,
-        question:
-          "你們希望招募到哪些人格特質的人呢？一定要相關學歷有工作背景才會錄取？",
-        answer: `不是的，其最重要的錄取因素會在於「<span class="mark_style"
-        >你在程式方向的自我探索</span
-      >」到了哪個階段？<br />火箭隊主要是幫助想要投入程式工作的人才進行加速動作，所以我們會從您的履歷中觀察，<span class="bold_style"
-      >在加入火箭隊前您是否已經有各種嘗試，以確保您真的對工程師領域有興趣。</span>`,
-      },
-    ],
-  },
-  {
-    title: "我適合當工程師嗎？",
-    content: [
-      {
-        id: 1,
-        question: "我以前從來沒寫過程式，不知道自己適不適合？",
+        question: "報名到什麼時候？報完會怎樣？",
         answer:
-          "火箭隊所能提供的，就是「提供給你所有能給的資源，持續將您推到前方」，在這過程中您也能加速了解自己是否適合這條路。在正式加入我們之前，我們鼓勵你先自行探索程式的世界，體驗其魅力，並聆聽內心的回響。",
-      },
-      {
-        id: 2,
-        question: "所以，培訓營並非百分百可以轉職成功？",
-        answer:
-          "如果有哪個培訓營能號稱 100% 轉職成功，那一定是詐騙集團。培訓營的用意在於加速您在軟體程式投入，以方便快速了解自己是否適合。",
+          "2026/11/30（一）開放報名，到 2027/01/04（一）23:59。1/7（四）寄面試通知信，收到後要照信上的期限回覆。",
       },
       {
         id: 3,
-        question: "我年紀超過 35 歲，之前工作都是非資訊，這樣也有機會嗎？",
-        answer: "沒問題，我們也曾協助許多非資訊背景的學員轉職成功。",
+        question: "什麼時候面試？",
+        answer:
+          "2027/01/12（二）10:00～14:00，在高雄火箭隊基地（高雄市新興區民生一路56號2樓之2）。面試分時段，不用整段都在場，細節寫在面試通知信裡。",
       },
       {
         id: 4,
-        question: "我是非資工資管背景，這樣也可以嗎？",
+        question: "什麼時候通知錄取？",
         answer:
-          "其實絕大多數的工程師都是非資訊背景，像是 <u>洧杰</u> 是多媒體 3D 設計系，<u>Justin</u> 則是電腦通訊系。",
+          "2027/01/15（五），用 Email 通知。",
       },
       {
         id: 5,
-        question: "我擔心過了七個月後，還是沒辦法成長，感覺會浪費時間。",
-        answer:
-          "有些事情是您必須投入後，踏出下一步，才會了解自己是否適合，火箭隊的存在就是協助您迅速深入了解這個產業，讓您能更全面地掌握與判斷。",
+        question: "有可能會落選嗎？你們看什麼？",
+        answer: `會，一梯只收 8 個人。我們看兩件事：<span class="mark_style">你為什麼想來、能不能半年全天到場</span>。還沒有題目也沒關係，可以進營隊再來想。學歷、工作背景和程式基礎都不看。`,
       },
     ],
   },
   {
+    id: "job",
     title: "求職就業",
     content: [
       {
         id: 1,
-        question: "會幫忙協助媒合嗎？",
+        question: "我想進科技業，會幫忙媒合嗎？",
         answer:
-          "會視每位同學的學習狀態進行評估。火箭隊教練都是在南部業界超過十年以上的工作經歷，我們主要也是希望透過此服務來協助在地媒合。",
+          "會讓你跟廠商見到面：合作廠商會來成果發表看人，你可以直接拿產品跟他們聊。所以想去科技業，最好的準備就是做出一個真的有人在用的產品，搭配 AI 工具（AI agent）一起把它做出來。",
       },
       {
         id: 2,
         question: "那一定會上嗎？",
         answer:
-          "不一定，凡事都講求緣分，但只要您成長得足夠養分，我們也會盡力協助媒合。",
+          "不一定。我們能做的是陪你把產品做出來、讓真人用過，面試時你有東西可以拿出來講。",
       },
       {
         id: 3,
         question: "我想去中北部找工作也可以嗎？",
         answer:
-          "當然沒問題，火箭隊是在幫助學員搭造火箭，只要您有了此能力，想飛去哪都是沒問題，教練們也樂觀其成。",
+          "可以。做出來的產品就是你的作品集，去哪裡面試都帶得走。",
       },
     ],
   },
   {
+    id: "about",
     title: "關於火箭隊",
     content: [
       {
         id: 1,
         question: "你們是誰？",
         answer:
-          "<u>洧杰</u> 與 <u>Justin</u> 皆在軟體公司打滾多年，七年前一同共事，因許多願景志同道合，五年前出來共同創業，目前皆穩定於政府系統專案上養活團隊。",
+          "<b>洧杰</b>與<b>賈斯汀（Justin）</b>皆在軟體公司打滾多年，2012 年一同共事，因許多願景志同道合，2014 年出來共同創業，目前皆穩定於政府系統專案上養活團隊。",
       },
       {
         id: 2,
-        question: "<u>洧杰</u> 是六角學院的校長？",
+        question: "<b>洧杰</b>是六角學院的校長？",
         answer:
-          "是的，六角學院為 <u>洧杰</u> 與 <u>王志誠</u> 於三年前共同創立的線上教育單位，目前則為六角學院與火箭隊的共同創辦人。",
+          "2016～2022 年是。六角學院是<b>洧杰</b>與<b>王志誠（卡斯伯）</b>在 2016 年共同創立的線上教育單位，目前則為六角學院與火箭隊的共同創辦人。2023～2026 年，兩人都擔任六角學院技術講師。",
       },
       {
         id: 3,
@@ -261,42 +223,41 @@ const faqAry = [
       {
         id: 4,
         question: "你們為什麼想創立這單位？",
-        answer: `我們看到許多人想進入這行，但卻不得其門而入。<u>洧杰</u> 與 <u>Justin</u> 也希望藉由我們豐富的實務經驗，來達到知識傳承。<br />
+        answer: `我們看到許多人想做出自己的東西，但卻不得其門而入。<b>洧杰</b>與<b>賈斯汀</b>也希望藉由我們豐富的實務經驗，來達到知識傳承。<br />
         <span class="mark_style">我們其實想了很久，有什麼東西是過了十年後，還是會存在的？最後想到的則是「人」。</span><br />
         我們希望與更多「人」締結關係，由火箭隊出去的學員都能擁有好的發展，讓火箭隊這裡變成開發能量的集聚地，自然就會有更多的商業機會，例如工商媒合、專案合作等等，但我們並不急於一時，主要都還是以培育後進為主。`,
       },
       {
         id: 5,
         question: "火箭隊有什麼核心思想？",
-        answer: `在火箭隊的宗旨中，<span class="mark_style">熱愛分享</span>是非常重要的。<br />在這裡您永遠會遇到需要您技術的人，藉由分享，讓彼此都獲得新知，真正實現 1+1 = 無限，也才不會只有自己孤軍奮戰的感受。分享的同時也能檢視自己是否真正掌握該技術、疏理自己的脈絡，讓自己更加深入技術核心。`,
+        answer: `在火箭隊的宗旨中，<span class="mark_style">熱愛分享</span>是非常重要的。<br />在這裡你永遠會遇到需要你幫忙的人，藉由分享，讓彼此都獲得新知，真正實現 1+1 = 無限，也才不會只有自己孤軍奮戰的感受。分享的同時也能檢視自己是否真正掌握該技術、疏理自己的脈絡，讓自己更加深入技術核心。`,
       },
     ],
   },
   {
+    id: "other",
     title: "其他問題",
     content: [
       {
         id: 1,
-        question: "一個梯次預計會錄取多少人，預計多久會再招收新的一梯次呢？",
-        answer:
-          "一個梯次預計錄取 4 個人，會等到培訓學員學習到一個階段，再招收新的梯次。",
+        question: "你們不是直銷吧？",
+        answer: "不是，不會推銷任何東西。",
       },
       {
         id: 2,
-        question: "目前已經有工作，有沒有晚上的梯次呢？",
+        question: "你們真的不是詐騙集團？",
         answer:
-          "目前因為空間與資源都有限，只能開白天的梯次。未來希望有更多認同我們的人或公司加入，再來開晚上的梯次。",
+          "不是。火箭隊從 2019 年開始在高雄培訓，已經辦了 23 梯，粉專上有歷屆學員的分享。",
       },
       {
         id: 3,
-        question: "未來會不會有 PHP、Node.js 呢？",
-        answer:
-          "目前沒有，未來希望有擁有相關技術的人或公司願意認同我們，加入我們一起培育相關技術人才。",
+        question: "下一梯什麼時候招生？",
+        answer: "下一梯的招生時間會公布在粉專。",
       },
       {
         id: 4,
         question: "我想多瞭解火箭隊，有什麼可以參考？",
-        answer: `<a href="https://www.facebook.com/profile.php?id=100039975056467" target="_blank" rel="noreferrer noopener">火箭隊培訓營粉專</a>有火箭隊學員們的日常小趣事，還有老師和學長姐們的心得分享：<ul class="faq_link">${expLinksHtml}</ul>`,
+        answer: `<a href="https://www.facebook.com/profile.php?id=100039975056467" target="_blank" rel="noreferrer noopener">火箭隊培訓營粉專</a>有火箭隊學員們的日常小趣事。下面幾篇是以前程式培訓時期的學長姐寫的心得：<ul class="faq_link">${expLinksHtml}</ul>`,
       },
     ],
   },
@@ -304,43 +265,96 @@ const faqAry = [
 
 //----------
 
-// 最近梯次
+// 最近梯次（舊版區塊，頁面上沒有就略過）
 const batchTicker = document.querySelector(".new_batch_ticker");
-const batchTickerContent = `
-<p class="new_batch_ticker_text">${batch}</p>
-<p class="new_batch_ticker_text">${batch}</p>`;
-batchTicker.innerHTML = batchTickerContent;
+if (batchTicker) {
+  batchTicker.innerHTML = `<p class="new_batch_ticker_text">${batch}</p>`;
+}
 
-// FAQ
+// FAQ：答案預設全部展開，點問題可以收起來
 const faq = document.querySelector(".faq_container");
-let title;
-let htmlContent;
 
-let faqHtml = "";
-faqAry.forEach((section) => {
-  let faqContent = section.content;
-  let htmlContent = "";
-  faqContent.forEach((content) => {
-    const listItem = `
-    <li class="question_item">
-      <img src="./image/training/ic-no${content.id}.svg" alt="ic-no${content.id}" />
-      <div>
-        <p class="question_item_Q">${content.question}</p>
-        <p class="question_item_A">${content.answer}</p>
-      </div>
-    </li>`;
-    htmlContent += listItem;
+if (faq) {
+  const navHtml = faqAry
+    .map((section) => `<li><a href="#faq-${section.id}">${section.title}</a></li>`)
+    .join("");
+
+  let faqHtml = `
+  <div class="faq25_head" id="faq-top">
+    <p class="neko_kicker">FAQ</p>
+    <h2 class="neko_h2">常見問題</h2>
+    <p class="faq25_hint">答案都已展開，可先點分類跳過去。</p>
+    <ul class="faq25_nav">${navHtml}</ul>
+  </div>`;
+
+  faqAry.forEach((section) => {
+    let htmlContent = "";
+    section.content.forEach((content) => {
+      const anchor = content.anchor ? ` id="${content.anchor}"` : "";
+      htmlContent += `
+      <li class="question_item">
+        <details${anchor} open>
+          <summary class="question_item_Q">${content.question}</summary>
+          <div class="question_item_A">${content.answer}</div>
+        </details>
+      </li>`;
+    });
+
+    faqHtml += `
+    <section id="faq-${section.id}">
+      <h3>${section.title}</h3>
+      <a class="faq25_back" href="#faq-top">回分類 ↑</a>
+      <ul class="question_container">
+      ${htmlContent}
+      </ul>
+    </section>`;
   });
 
-  const htmlContainer = `
-  <section>
-    <h3>${section.title}</h3>
-    <ul class="question_container">
-    ${htmlContent}
-    </ul>
-  </section>`;
+  faq.innerHTML = faqHtml;
 
-  faqHtml += htmlContainer;
-});
+  // 從頁面其他地方連到某一題（例如 #q-fulltime）時，直接把那題打開並捲過去
+  const openQuestion = (id) => {
+    const target = id ? document.getElementById(id) : null;
+    if (!target || target.tagName !== "DETAILS") return false;
+    target.open = true;
+    target.scrollIntoView({ block: "center" });
+    return true;
+  };
+  // 每次點都要打開（就算網址的 # 沒變、那題剛被收起來）
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href^="#q-"]');
+    if (!link) return;
+    if (openQuestion(link.hash.slice(1))) {
+      e.preventDefault();
+      history.replaceState(null, "", link.hash);
+    }
+  });
+  window.addEventListener("hashchange", () =>
+    openQuestion(decodeURIComponent(location.hash.slice(1)))
+  );
+  openQuestion(decodeURIComponent(location.hash.slice(1)));
 
-faq.innerHTML = faqHtml;
+  // 電腦版左欄的分類捷徑：標出目前看到哪一類（畫面上方 40% 那條線落在哪一類）
+  const navLinks = [...faq.querySelectorAll(".faq25_nav a")];
+  const faqSections = [...faq.querySelectorAll("section[id^='faq-']")];
+  const desktopQuery = window.matchMedia("(min-width: 1024px)");
+  const updateCurrent = () => {
+    const line = window.innerHeight * 0.4;
+    const faqBox = faq.getBoundingClientRect();
+    let currentId = "";
+    if (desktopQuery.matches && faqBox.top < line && faqBox.bottom > 0) {
+      faqSections.forEach((s) => {
+        if (s.getBoundingClientRect().top <= line) currentId = s.id;
+      });
+    }
+    navLinks.forEach((a) => {
+      const isCurrent = a.getAttribute("href") === `#${currentId}`;
+      a.classList.toggle("is-current", isCurrent);
+      if (isCurrent) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  };
+  window.addEventListener("scroll", updateCurrent, { passive: true });
+  window.addEventListener("resize", updateCurrent);
+  updateCurrent();
+}

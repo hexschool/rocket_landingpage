@@ -732,116 +732,6 @@ footer p:first-child::after {
   margin-top: 12px;
 }
 
-#hex_products .products_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 120px;
-}
-@media (max-width: 767px) {
-  #hex_products .products_container {
-    padding-bottom: 92px;
-  }
-}
-#hex_products .products_lead {
-  margin-top: 8px;
-  color: #757575;
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-}
-@media (max-width: 767px) {
-  #hex_products .products_lead {
-    font-size: 16px;
-  }
-}
-#hex_products .product_card_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  width: 100%;
-  margin-top: 40px;
-}
-@media (max-width: 767px) {
-  #hex_products .product_card_container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 24px;
-  }
-}
-#hex_products .product_card {
-  list-style: none;
-}
-#hex_products .product_card a {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  height: 100%;
-  padding: 24px;
-  background-color: #fff;
-  border: 2px solid #363636;
-  border-radius: 16px;
-  box-shadow: 4px 4px 0 #363636;
-  text-decoration: none;
-  color: #363636;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-#hex_products .product_card a:hover {
-  color: #363636;
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #363636;
-}
-@media (max-width: 767px) {
-  #hex_products .product_card a {
-    gap: 16px;
-    padding: 16px;
-  }
-}
-#hex_products .product_logo {
-  flex-shrink: 0;
-  width: 96px;
-  height: 96px;
-  border-radius: 22px;
-  object-fit: cover;
-}
-@media (max-width: 767px) {
-  #hex_products .product_logo {
-    width: 72px;
-    height: 72px;
-    border-radius: 16px;
-  }
-}
-#hex_products .product_type {
-  display: inline-block;
-  padding: 4px 12px;
-  border: 2px solid #7f94e2;
-  border-radius: 999px;
-  color: #7f94e2;
-  font-size: 14px;
-  line-height: normal;
-}
-#hex_products .product_text h3 {
-  margin-top: 8px;
-  font-size: 24px;
-  line-height: normal;
-}
-@media (max-width: 767px) {
-  #hex_products .product_text h3 {
-    font-size: 20px;
-  }
-}
-#hex_products .product_description {
-  margin-top: 4px;
-  color: #757575;
-  font-size: 16px;
-  font-weight: 500;
-}
-@media (max-width: 767px) {
-  #hex_products .product_description {
-    font-size: 14px;
-  }
-}
-
 #training {
   background-color: #f8f9fd;
   font-size: 16px;
@@ -1865,3 +1755,2791 @@ footer p:first-child::after {
   transform: translate(0, 0);
   margin-top: 40px;
 }
+
+/* === theme_neko start (synced from scss/_theme_neko.scss) === */
+/* 第 25 梯 產品組：貓掌配色（米白方格＋墨、青、橘）
+   只套在 <body class="theme_neko"> 的頁面（index.html），共同空間頁不受影響。
+   本檔刻意只用純 CSS 語法，css/all.css 最後面貼的是同一份內容；改這裡也要同步改那裡。 */
+
+.theme_neko {
+  --neko-ink: #1b2838;
+  --neko-ink-2: #4a5563;
+  --neko-teal: #157d7f;
+  --neko-teal-soft: #d5ecec;
+  --neko-orange-ink: #b86e0b;
+  --neko-orange: #e39a2c;
+  --neko-gold: #f2b65a;
+  --neko-tag-bg: #fff6e8;
+  --neko-tag-text: #8a5208;
+  --neko-cream: #fffdf8;
+  --neko-cream-2: #faf6ef;
+  --neko-grid: #f3ece2;
+  --neko-line: #e4ded3;
+  background-color: var(--neko-cream);
+  background-image: linear-gradient(var(--neko-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--neko-grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  color: var(--neko-ink);
+}
+.theme_neko * {
+  font-family: "Noto Sans TC", "PingFang TC", "Heiti TC", sans-serif;
+}
+.theme_neko main {
+  color: var(--neko-ink);
+}
+
+/* 跑馬燈 */
+.theme_neko #marquee {
+  background-color: var(--neko-ink);
+  box-shadow: none;
+}
+.theme_neko #marquee .marquee_item {
+  color: var(--neko-gold);
+}
+
+/* 共用 */
+.theme_neko .neko_wrap {
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.theme_neko .neko_nowrap {
+  white-space: nowrap;
+}
+.theme_neko .neko_kicker {
+  color: var(--neko-teal);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+.theme_neko .neko_h2 {
+  margin-top: 8px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.theme_neko .neko_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 999px;
+  background-color: #fff;
+  color: var(--neko-ink);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.theme_neko .neko_btn:hover {
+  color: var(--neko-ink);
+  transform: translate(-2px, -2px);
+}
+.theme_neko .neko_btn_primary {
+  padding: 16px 32px;
+  background-color: var(--neko-orange);
+  box-shadow: 4px 4px 0 var(--neko-ink);
+  font-size: 20px;
+}
+.theme_neko .neko_btn_primary:hover {
+  box-shadow: 6px 6px 0 var(--neko-ink);
+}
+.theme_neko .neko_btn_sm {
+  padding: 8px 18px;
+  background-color: var(--neko-orange);
+  box-shadow: 3px 3px 0 var(--neko-ink);
+  font-size: 15px;
+}
+
+/* 首屏 */
+.theme_neko #hero25 {
+  padding-bottom: 88px;
+}
+.theme_neko .hero25_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+}
+.theme_neko .hero25_brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--neko-ink);
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+}
+.theme_neko .hero25_brand:hover {
+  color: var(--neko-ink);
+}
+.theme_neko .hero25_brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.theme_neko .hero25_nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.theme_neko .hero25_link {
+  color: var(--neko-ink-2);
+  font-weight: 700;
+  text-decoration: none;
+}
+.theme_neko .hero25_link:hover {
+  color: var(--neko-teal);
+}
+.theme_neko .hero25_main {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 56px;
+}
+.theme_neko .hero25_title {
+  margin: 12px 0 20px;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+.theme_neko .hero25_title em {
+  position: relative;
+  z-index: 0;
+  color: var(--neko-orange-ink);
+  font-style: normal;
+  font-weight: 900;
+  line-height: inherit;
+}
+.theme_neko .hero25_title em::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  z-index: -1;
+  height: 14px;
+  border-radius: 4px;
+  background-color: var(--neko-gold);
+  opacity: 0.45;
+}
+.theme_neko .hero25_lead {
+  margin-bottom: 24px;
+  color: var(--neko-ink-2);
+  font-size: 20px;
+  line-height: 1.7;
+}
+.theme_neko .hero25_lead b {
+  color: var(--neko-ink);
+  font-weight: 900;
+}
+.theme_neko .hero25_chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.theme_neko .hero25_chips li {
+  list-style: none;
+  padding: 6px 14px;
+  border: 2px solid var(--neko-orange-ink);
+  border-radius: 999px;
+  background-color: var(--neko-tag-bg);
+  color: var(--neko-tag-text);
+  font-size: 15px;
+  line-height: 1.4;
+}
+.theme_neko .hero25_cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.theme_neko .hero25_orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  border: 3px dashed var(--neko-teal);
+  border-radius: 50%;
+}
+.theme_neko .hero25_orbit::before {
+  content: "";
+  position: absolute;
+  inset: 14%;
+  border: 2px solid var(--neko-line);
+  border-radius: 50%;
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko .hero25_orbit img {
+  position: relative;
+  width: 58%;
+  border-radius: 50%;
+  box-shadow: 8px 8px 0 var(--neko-orange);
+}
+.theme_neko .hero25_star {
+  position: absolute;
+  color: var(--neko-orange);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .hero25_star.s1 {
+  top: 4%;
+  right: 10%;
+}
+.theme_neko .hero25_star.s2 {
+  bottom: 10%;
+  left: 2%;
+  color: var(--neko-teal);
+  font-size: 24px;
+}
+.theme_neko .hero25_star.s3 {
+  top: 46%;
+  right: -4%;
+  color: var(--neko-gold);
+  font-size: 22px;
+}
+.theme_neko .hero25_tag {
+  position: absolute;
+  padding: 10px 14px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: 4px 4px 0 var(--neko-orange);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.theme_neko .hero25_tag small {
+  display: block;
+  color: var(--neko-teal);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+.theme_neko .hero25_tag.t1 {
+  top: 8%;
+  left: -6%;
+}
+.theme_neko .hero25_tag.t2 {
+  bottom: 4%;
+  right: -2%;
+}
+
+/* 做出來，會長這樣 */
+.theme_neko #results25 {
+  padding: 72px 0;
+  background-color: var(--neko-ink);
+  color: #fff;
+}
+.theme_neko #results25 .neko_kicker {
+  color: var(--neko-gold);
+}
+/* 三列超大數字，左右交錯：單數列數字在左、人在右；雙數列反過來 */
+.theme_neko .results25_nums {
+  margin: 28px 0 0;
+  padding: 0;
+}
+.theme_neko .results25_row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+  padding: 40px 0;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.22);
+}
+.theme_neko .results25_row:last-child {
+  border-bottom: 0;
+  padding-bottom: 8px;
+}
+.theme_neko .results25_row:nth-child(even) .results25_figure {
+  order: 2;
+  text-align: right;
+}
+.theme_neko .results25_row:nth-child(even) .results25_who {
+  align-items: flex-start;
+}
+.theme_neko .results25_want {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--neko-gold);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.theme_neko .results25_idx {
+  padding: 0 10px;
+  border: 2px solid var(--neko-gold);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+.theme_neko .results25_big {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 112px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.theme_neko .results25_big small {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+.theme_neko .results25_big span {
+  margin-left: 6px;
+  color: var(--neko-orange);
+}
+.theme_neko .results25_who {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.theme_neko .results25_meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 34px 18px 18px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 999px;
+  background-color: #fff;
+  box-shadow: 7px 7px 0 var(--neko-orange);
+  color: var(--neko-ink);
+}
+.theme_neko .results25_logo {
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 24px;
+  background-color: #fff;
+  object-fit: cover;
+}
+.theme_neko .results25_ava {
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 50%;
+  background-color: var(--neko-teal-soft);
+  object-fit: cover;
+}
+.theme_neko .results25_logo + .results25_ava {
+  margin-left: -34px;
+}
+.theme_neko .results25_meta b {
+  margin-right: 10px;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.theme_neko .results25_role {
+  padding: 4px 14px;
+  border-radius: 999px;
+  background-color: var(--neko-teal);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: 4px;
+}
+.theme_neko .results25_bits {
+  margin-top: 4px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.theme_neko .results25_link {
+  padding: 12px 26px;
+  border: 3px solid var(--neko-gold);
+  border-radius: 999px;
+  color: var(--neko-gold);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.theme_neko .results25_link:hover {
+  background-color: var(--neko-gold);
+  color: var(--neko-ink);
+}
+
+/* 你是哪一種？ */
+.theme_neko #about_rocket {
+  margin-top: 0;
+  padding: 88px 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+.theme_neko .about25_lead {
+  max-width: 760px;
+  margin-top: 16px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.theme_neko .about25_lead b {
+  color: var(--neko-ink);
+  font-weight: 900;
+}
+.theme_neko .persona25 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+.theme_neko .persona25_card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 24px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 var(--neko-ink);
+}
+.theme_neko .persona25_img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: -8px auto 0;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.theme_neko #training .card_img img {
+  border-radius: 18px;
+}
+.theme_neko .persona25_no {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--neko-teal);
+  border-radius: 50%;
+  background-color: var(--neko-teal-soft);
+  color: var(--neko-teal);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .persona25_card h3 {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.theme_neko .persona25_card p {
+  color: var(--neko-ink-2);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.theme_neko .persona25_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+.theme_neko .persona25_tags li {
+  list-style: none;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: var(--neko-tag-bg);
+  color: var(--neko-tag-text);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 時間軸：電腦版橫向，平板和手機轉直向；★ 報到、長條＝半年做產品，形狀不同不只靠顏色 */
+.theme_neko #timeline25 {
+  padding: 96px 0;
+  border-top: 3px solid var(--neko-ink);
+  background-color: #fde9c4;
+}
+/* 左：超大「6 個月」；右：直式時間軸 */
+.theme_neko .tl25_layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 72px;
+}
+.theme_neko .tl25_months {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 8px;
+  color: var(--neko-ink);
+  line-height: 0.95;
+}
+.theme_neko .tl25_months b {
+  color: var(--neko-orange-ink);
+  font-size: 220px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  -webkit-text-stroke: 4px var(--neko-ink);
+  paint-order: stroke fill;
+  text-shadow: 8px 8px 0 var(--neko-ink);
+}
+.theme_neko .tl25_months span {
+  font-size: 48px;
+  font-weight: 900;
+}
+.theme_neko .tl25_range {
+  margin-top: 20px;
+  color: var(--neko-ink);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.theme_neko .tl25 {
+  position: relative;
+  display: grid;
+  gap: 26px;
+  margin: 0;
+  padding: 28px 32px 28px 28px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 8px 8px 0 var(--neko-ink);
+}
+.theme_neko .tl25::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 41px;
+  border-left: 3px solid var(--neko-ink);
+}
+.theme_neko .tl25_item {
+  position: relative;
+  list-style: none;
+  padding-left: 56px;
+}
+.theme_neko .tl25_dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 50%;
+  background-color: #fff;
+}
+.theme_neko .tl25_item.is-key .tl25_dot {
+  display: grid;
+  place-items: center;
+  top: -8px;
+  left: -8px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--neko-orange);
+  box-shadow: 3px 3px 0 var(--neko-ink);
+  color: var(--neko-ink);
+  font-size: 20px;
+  line-height: 1;
+}
+.theme_neko .tl25_item.is-goal .tl25_dot {
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko .tl25_date {
+  color: var(--neko-teal);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.theme_neko .tl25_title {
+  margin-top: 6px;
+  color: var(--neko-ink);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.theme_neko .tl25_item.is-key .tl25_title {
+  color: var(--neko-orange-ink);
+}
+.theme_neko .tl25_note {
+  margin-top: 6px;
+  color: var(--neko-ink-2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 一個人做產品，多半卡在這三個地方：大插圖和文字左右交錯；
+   「卡在」✕ 灰字、「火箭隊給你」✓ 白卡青勾，形狀加文字，不只靠顏色 */
+.theme_neko #stuck25 {
+  padding: 96px 0;
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-tag-bg);
+}
+.theme_neko .stuck25 {
+  display: grid;
+  gap: 56px;
+  margin: 48px 0 0;
+  padding: 0;
+}
+.theme_neko .stuck25_row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+  list-style: none;
+}
+.theme_neko .stuck25_row:nth-child(even) .stuck25_art {
+  order: 2;
+}
+.theme_neko .stuck25_art {
+  justify-self: center;
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  overflow: hidden;
+  border: 3px solid var(--neko-ink);
+  border-radius: 50% 50% 24px 24px;
+  background-color: #fff;
+  box-shadow: 8px 8px 0 var(--neko-orange);
+}
+.theme_neko .stuck25_row:nth-child(even) .stuck25_art {
+  box-shadow: -8px 8px 0 var(--neko-teal);
+}
+.theme_neko .stuck25_art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.theme_neko .stuck25_body {
+  display: grid;
+  gap: 14px;
+}
+.theme_neko .stuck25_pain,
+.theme_neko .stuck25_fix {
+  position: relative;
+  padding: 4px 0 4px 72px;
+}
+.theme_neko .stuck25_pain h3 {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--neko-orange);
+}
+.theme_neko .stuck25_fix {
+  padding: 24px 28px 24px 96px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 var(--neko-ink);
+}
+.theme_neko .stuck25_fix::before {
+  content: "↓";
+  position: absolute;
+  top: -40px;
+  left: 14px;
+  color: var(--neko-ink);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .stuck25_mark {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--neko-ink-2);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .stuck25_fix .stuck25_mark {
+  top: 24px;
+  left: 28px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--neko-teal);
+  color: #fff;
+  font-size: 22px;
+}
+.theme_neko .stuck25_label {
+  color: var(--neko-ink-2);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+.theme_neko .stuck25_fix .stuck25_label {
+  color: var(--neko-teal);
+}
+.theme_neko .stuck25 h3 {
+  margin-top: 2px;
+  color: var(--neko-ink);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.theme_neko .stuck25_pain h3 {
+  color: var(--neko-ink-2);
+  font-size: 24px;
+}
+.theme_neko .stuck25_note {
+  margin-top: 6px;
+  color: var(--neko-ink-2);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.theme_neko .stuck25_fix .stuck25_note {
+  color: var(--neko-ink);
+  font-size: 17px;
+}
+
+/* 高雄基地：左文字、右照片拼貼（一大兩小） */
+.theme_neko #base25 {
+  padding: 96px 0;
+  border-top: 3px solid var(--neko-ink);
+  background-color: #fff;
+}
+.theme_neko .base25 {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 56px;
+}
+.theme_neko .base25_lead {
+  margin-top: 18px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.theme_neko .base25_facts {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+}
+.theme_neko .base25_facts li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  list-style: none;
+  padding: 12px 0;
+  border-bottom: 2px dashed var(--neko-line);
+}
+.theme_neko .base25_facts b {
+  flex-shrink: 0;
+  min-width: 128px;
+  color: var(--neko-teal);
+  font-size: 18px;
+  font-weight: 900;
+}
+.theme_neko .base25_facts span {
+  color: var(--neko-ink);
+  font-size: 16px;
+}
+.theme_neko .base25_photos {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: 460px;
+}
+.theme_neko .base25_photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 3px solid var(--neko-ink);
+  border-radius: 18px;
+  background-color: var(--neko-cream-2);
+}
+.theme_neko .base25_photo.is-main {
+  grid-row: span 2;
+  box-shadow: 8px 8px 0 var(--neko-ink);
+}
+.theme_neko .base25_photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+.theme_neko .base25_photo figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 4px 12px;
+  border: 2px solid var(--neko-ink);
+  border-radius: 999px;
+  background-color: #fff;
+  color: var(--neko-ink);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+/* 半年，你會解鎖哪些技能？四站路線，電腦版橫向用 → 串起來，平板以下靠編號 */
+.theme_neko #skills25 {
+  padding: 88px 0;
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko .skills25_lead {
+  max-width: 760px;
+  margin-top: 16px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.8;
+}
+/* 左：標題＋插圖；右：直的四站路線，虛線串起來，最後一站是終點旗子 */
+.theme_neko .skills25_layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 72px;
+}
+.theme_neko .skills25_art {
+  max-width: 440px;
+  margin: 32px 0 0;
+  overflow: hidden;
+  border: 3px solid var(--neko-ink);
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 8px 8px 0 var(--neko-teal);
+}
+.theme_neko .skills25_art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.theme_neko .skills25 {
+  position: relative;
+  display: grid;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.theme_neko .skills25::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 30px;
+  left: 22px;
+  border-left: 3px dashed var(--neko-ink);
+}
+.theme_neko .skills25_step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding-left: 76px;
+}
+.theme_neko .skills25_no {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 50%;
+  background-color: var(--neko-orange);
+  color: var(--neko-ink);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .skills25_step h3 {
+  color: var(--neko-ink);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.theme_neko .skills25_step > p {
+  color: var(--neko-ink-2);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.theme_neko .skills25_tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 4px 0 0;
+}
+.theme_neko .skills25_end {
+  position: relative;
+  list-style: none;
+}
+.theme_neko .skills25_tools li {
+  list-style: none;
+  padding: 3px 10px;
+  border: 2px solid var(--neko-ink);
+  border-radius: 999px;
+  background-color: #fff;
+  color: var(--neko-ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.theme_neko .skills25_goal {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 6px 22px 6px 4px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 999px;
+  background-color: var(--neko-orange);
+  box-shadow: 4px 4px 0 var(--neko-ink);
+  color: var(--neko-ink);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.theme_neko .skills25_flag {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+/* 關於培訓裡的新區塊：兩種教練（深色整條）、每個月要花多少（收據） */
+.theme_neko #training .neko_wrap {
+  /* 跟產品組卡、教練團同寬（container_sm 左右各 12%） */
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 12%;
+  margin-top: 88px;
+}
+.theme_neko .coach25 {
+  margin-top: 96px;
+  padding: 88px 0 96px;
+  border-top: 3px solid var(--neko-ink);
+  border-bottom: 3px solid var(--neko-ink);
+  background-color: var(--neko-ink);
+  color: #fff;
+}
+.theme_neko #training .coach25 .neko_wrap {
+  margin: 0 auto;
+}
+.theme_neko .coach25 .neko_kicker {
+  color: var(--neko-gold);
+}
+.theme_neko .coach25 .neko_h2 {
+  color: #fff;
+}
+.theme_neko .coach25_split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 32px;
+  margin-top: 48px;
+}
+.theme_neko .coach25_half {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.theme_neko .coach25_plus {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 3px solid var(--neko-gold);
+  border-radius: 50%;
+  color: var(--neko-gold);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .coach25_faces {
+  display: flex;
+  margin: 0 0 8px;
+  padding: 0;
+}
+.theme_neko .coach25_faces li {
+  list-style: none;
+  width: 104px;
+  height: 104px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko .coach25_faces li + li {
+  margin-left: -22px;
+}
+.theme_neko .coach25_half.is-prod .coach25_faces li {
+  background-color: var(--neko-gold);
+}
+.theme_neko .coach25_faces img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.theme_neko .coach25_role {
+  align-self: flex-start;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background-color: var(--neko-teal);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.theme_neko .coach25_half.is-prod .coach25_role {
+  background-color: var(--neko-orange);
+  color: var(--neko-ink);
+}
+.theme_neko .coach25_half h3 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+.theme_neko .coach25_text {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.theme_neko .coach25_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+.theme_neko .coach25_tags li {
+  list-style: none;
+  padding: 4px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.theme_neko .coach25_who {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 2px dashed rgba(255, 255, 255, 0.25);
+  color: var(--neko-gold);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* 費用：左文字、右一張收據（齒狀下緣、「培訓免費」圓章） */
+.theme_neko #training .fee25 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 56px;
+}
+.theme_neko .fee25_lead {
+  margin-top: 18px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.theme_neko .fee25_receipt {
+  position: relative;
+  padding: 32px 32px 28px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 8px 8px 0 var(--neko-ink);
+  transform: rotate(-1.5deg);
+}
+.theme_neko .fee25_head {
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--neko-ink);
+  color: var(--neko-ink);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.theme_neko .fee25_lines {
+  margin: 0;
+  padding: 0;
+}
+.theme_neko .fee25_lines li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  list-style: none;
+  padding: 16px 0;
+  border-bottom: 2px dashed var(--neko-line);
+}
+.theme_neko .fee25_lines span {
+  color: var(--neko-ink);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.theme_neko .fee25_lines small {
+  display: block;
+  margin-top: 2px;
+  color: var(--neko-ink-2);
+  font-size: 14px;
+  font-weight: 400;
+}
+.theme_neko .fee25_lines b {
+  flex-shrink: 0;
+  color: var(--neko-ink);
+  font-size: 22px;
+  font-weight: 900;
+}
+.theme_neko .fee25_lines b.is-free {
+  color: var(--neko-orange-ink);
+}
+.theme_neko .fee25_total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+}
+.theme_neko .fee25_total span {
+  color: var(--neko-ink);
+  font-size: 18px;
+  font-weight: 900;
+}
+.theme_neko .fee25_total b {
+  color: var(--neko-teal);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .fee25_stamp {
+  position: absolute;
+  top: -30px;
+  right: -26px;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border: 3px solid var(--neko-orange-ink);
+  border-radius: 50%;
+  background-color: var(--neko-tag-bg);
+  box-shadow: inset 0 0 0 4px var(--neko-tag-bg), inset 0 0 0 6px var(--neko-orange-ink);
+  color: var(--neko-orange-ink);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  transform: rotate(12deg);
+}
+
+/* 關於培訓、教練團 */
+.theme_neko .rocket_page .mark_style {
+  background-image: linear-gradient(transparent 55%, rgba(242, 182, 90, 0.55) 55%);
+}
+.theme_neko #training {
+  padding-top: 88px;
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-cream-2);
+}
+.theme_neko #training .training_container h2 {
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 900;
+}
+.theme_neko #training .new_batch {
+  border: 2px solid var(--neko-ink);
+  box-shadow: 3px 3px 0 var(--neko-ink);
+}
+.theme_neko #training .new_batch_title {
+  border-right-color: var(--neko-line);
+  color: var(--neko-teal);
+}
+.theme_neko #training .career_card {
+  border: 3px solid var(--neko-ink);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 6px 6px 0 var(--neko-ink);
+}
+.theme_neko #training .career_card_title h3 {
+  border: 3px solid var(--neko-ink);
+  background-color: var(--neko-orange);
+  box-shadow: 4px 4px 0 var(--neko-ink);
+  font-weight: 900;
+}
+.theme_neko #training .card_content_content h4 {
+  border-bottom-color: var(--neko-teal);
+  font-weight: 900;
+}
+.theme_neko #training .coach h3 {
+  font-weight: 900;
+}
+.theme_neko #training .coach_card {
+  border: 3px solid var(--neko-ink);
+}
+.theme_neko #training .coach_card:active,
+.theme_neko #training .coach_card.active {
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko #training .coach_name {
+  border: 3px solid var(--neko-ink);
+  box-shadow: 4px 4px 0 var(--neko-orange);
+}
+.theme_neko #training .coach_card.active .coach_name {
+  background-color: var(--neko-orange);
+  box-shadow: 4px 4px 0 var(--neko-ink);
+}
+.theme_neko #training .coach_description h4 {
+  font-weight: 900;
+}
+.theme_neko .button_go {
+  border: 3px solid var(--neko-ink);
+  border-radius: 20px;
+  background-color: var(--neko-orange);
+  box-shadow: 6px 6px 0 var(--neko-ink);
+  color: var(--neko-ink);
+}
+.theme_neko .button_go:hover {
+  color: var(--neko-ink);
+}
+.theme_neko .button_go h3 {
+  font-weight: 900;
+}
+
+/* 常見問題 */
+.theme_neko #faq section h3 {
+  font-size: 32px;
+  font-weight: 900;
+}
+.theme_neko #faq .question_item {
+  border-top-color: var(--neko-line);
+}
+.theme_neko #faq .question_item:last-child {
+  border-bottom-color: var(--neko-line);
+}
+.theme_neko #faq .question_item_Q {
+  color: var(--neko-ink);
+  font-weight: 900;
+}
+.theme_neko #faq .question_item_Q::before {
+  color: var(--neko-teal);
+}
+.theme_neko #faq .question_item_A {
+  color: var(--neko-ink-2);
+}
+.theme_neko #faq .question_item_A::before {
+  color: var(--neko-orange-ink);
+  font-weight: 900;
+}
+.theme_neko #faq a {
+  color: var(--neko-teal);
+}
+
+/* 主辦、協辦單位 */
+.theme_neko #support {
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-cream-2);
+}
+.theme_neko #support .support_container h2 {
+  margin-top: 0;
+  padding-top: 48px;
+  font-weight: 900;
+}
+.theme_neko #support .support_container .support_card_container .support_card_item .support_img {
+  border: 2px solid var(--neko-line);
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+  .theme_neko .hero25_main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 32px;
+  }
+  .theme_neko .hero25_orbit {
+    width: min(380px, 80%);
+    margin: 0 auto;
+  }
+  .theme_neko .persona25 {
+    grid-template-columns: 1fr;
+  }
+  /* 左右交錯的區塊，平板以下都改成上下排，圖或數字在上 */
+  .theme_neko .results25_row,
+  .theme_neko .stuck25_row,
+  .theme_neko .base25,
+  .theme_neko .skills25_layout,
+  .theme_neko .tl25_layout,
+  .theme_neko .coach25_split,
+  .theme_neko #training .fee25 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .theme_neko .results25_row:nth-child(even) .results25_figure,
+  .theme_neko .stuck25_row:nth-child(even) .stuck25_art {
+    order: 0;
+    text-align: left;
+  }
+  .theme_neko .results25_who,
+  .theme_neko .results25_row:nth-child(even) .results25_who {
+    align-items: flex-start;
+  }
+  .theme_neko .results25_big {
+    font-size: 88px;
+  }
+  .theme_neko .stuck25_art {
+    justify-self: start;
+    max-width: 360px;
+  }
+  .theme_neko .base25_photos {
+    height: 380px;
+  }
+  .theme_neko .skills25_art {
+    max-width: 360px;
+  }
+  .theme_neko .tl25_months b {
+    font-size: 160px;
+  }
+  .theme_neko .coach25_plus {
+    justify-self: start;
+  }
+  .theme_neko .fee25_receipt {
+    max-width: 520px;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .theme_neko .neko_wrap {
+    padding: 0 20px;
+  }
+  .theme_neko .neko_kicker {
+    font-size: 15px;
+  }
+  .theme_neko .neko_h2,
+  .theme_neko #training .training_container h2 {
+    font-size: 30px;
+  }
+  .theme_neko .hero25_bar {
+    padding: 14px 0;
+  }
+  .theme_neko .hero25_brand {
+    gap: 8px;
+    font-size: 16px;
+  }
+  .theme_neko .hero25_brand img {
+    width: 36px;
+    height: 36px;
+  }
+  .theme_neko .hero25_nav .neko_btn_sm {
+    display: none;
+  }
+  .theme_neko .hero25_link {
+    font-size: 14px;
+  }
+  .theme_neko #hero25 {
+    padding-bottom: 56px;
+  }
+  .theme_neko .hero25_title {
+    font-size: 40px;
+  }
+  .theme_neko .hero25_lead {
+    font-size: 17px;
+  }
+  .theme_neko .hero25_chips li {
+    font-size: 14px;
+  }
+  .theme_neko .neko_btn_primary {
+    padding: 14px 26px;
+    font-size: 18px;
+  }
+  .theme_neko .hero25_tag {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .theme_neko .hero25_tag.t1 {
+    left: -10%;
+  }
+  .theme_neko .hero25_tag.t2 {
+    right: -10%;
+  }
+  .theme_neko #results25 {
+    padding: 56px 0;
+  }
+  .theme_neko #about_rocket,
+  .theme_neko #timeline25,
+  .theme_neko #stuck25,
+  .theme_neko #base25,
+  .theme_neko #skills25 {
+    padding: 64px 0;
+  }
+
+  /* 做出來，會長這樣 */
+  .theme_neko .results25_row {
+    gap: 18px;
+    padding: 28px 0;
+  }
+  .theme_neko .results25_want {
+    font-size: 16px;
+  }
+  .theme_neko .results25_big {
+    font-size: 64px;
+  }
+  .theme_neko .results25_big small {
+    font-size: 15px;
+  }
+  .theme_neko .results25_meta {
+    gap: 12px;
+    width: 100%;
+    padding: 14px 16px 14px 14px;
+    border-radius: 28px;
+    box-shadow: 5px 5px 0 var(--neko-orange);
+  }
+  .theme_neko .results25_meta p:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+  }
+  .theme_neko .results25_meta b {
+    margin-right: 0;
+    font-size: 22px;
+  }
+  .theme_neko .results25_role {
+    padding: 2px 10px;
+    font-size: 14px;
+    vertical-align: 0;
+  }
+  .theme_neko .results25_bits {
+    font-size: 15px;
+  }
+  .theme_neko .results25_logo,
+  .theme_neko .results25_ava {
+    width: 64px;
+    height: 64px;
+  }
+  .theme_neko .results25_logo {
+    border-radius: 18px;
+  }
+  .theme_neko .results25_logo + .results25_ava {
+    margin-left: -26px;
+  }
+  .theme_neko .results25_link {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+
+  /* 卡在三個地方 */
+  .theme_neko .stuck25 {
+    gap: 48px;
+    margin-top: 32px;
+  }
+  .theme_neko .stuck25_row {
+    gap: 24px;
+  }
+  .theme_neko .stuck25_art {
+    max-width: 280px;
+  }
+  .theme_neko .stuck25_pain {
+    padding-left: 60px;
+  }
+  .theme_neko .stuck25_fix {
+    padding: 20px 18px 20px 80px;
+  }
+  .theme_neko .stuck25_fix .stuck25_mark {
+    top: 20px;
+    left: 18px;
+    width: 44px;
+    height: 44px;
+  }
+  .theme_neko .stuck25 h3 {
+    font-size: 26px;
+  }
+  .theme_neko .stuck25_pain h3 {
+    font-size: 20px;
+  }
+  .theme_neko .stuck25_note,
+  .theme_neko .stuck25_fix .stuck25_note {
+    font-size: 15px;
+  }
+
+  /* 基地照片 */
+  .theme_neko .base25_lead {
+    font-size: 16px;
+  }
+  .theme_neko .base25_facts b {
+    min-width: 112px;
+    font-size: 16px;
+  }
+  .theme_neko .base25_facts span {
+    font-size: 15px;
+  }
+  .theme_neko .base25_photos {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 10px;
+    height: 280px;
+  }
+  .theme_neko .base25_photo figcaption {
+    left: 8px;
+    bottom: 8px;
+    padding: 2px 10px;
+    font-size: 13px;
+  }
+
+  /* 技能 */
+  .theme_neko .skills25_lead {
+    font-size: 16px;
+  }
+  .theme_neko .skills25_art {
+    max-width: 280px;
+    margin-top: 24px;
+  }
+  .theme_neko .skills25 {
+    gap: 26px;
+  }
+  .theme_neko .skills25_step {
+    padding-left: 64px;
+  }
+  .theme_neko .skills25_step h3 {
+    font-size: 24px;
+  }
+  .theme_neko .skills25_goal {
+    font-size: 16px;
+  }
+
+  /* 時間軸 */
+  .theme_neko .tl25_months b {
+    font-size: 120px;
+    -webkit-text-stroke: 3px var(--neko-ink);
+    text-shadow: 5px 5px 0 var(--neko-ink);
+  }
+  .theme_neko .tl25_months span {
+    font-size: 32px;
+  }
+  .theme_neko .tl25_range {
+    font-size: 16px;
+  }
+  .theme_neko .tl25 {
+    gap: 24px;
+    padding: 24px 18px;
+  }
+  .theme_neko .tl25::before {
+    left: 30px;
+  }
+  .theme_neko .tl25_item {
+    padding-left: 48px;
+  }
+  .theme_neko .tl25_title {
+    font-size: 20px;
+  }
+
+  /* 關於培訓 */
+  .theme_neko #training {
+    padding-top: 56px;
+  }
+  .theme_neko #training .neko_wrap {
+    padding: 0 20px;
+    margin-top: 56px;
+  }
+  .theme_neko #training .career_card {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .theme_neko .persona25_card h3 {
+    font-size: 22px;
+  }
+  .theme_neko .coach25 {
+    margin-top: 56px;
+    padding: 64px 0;
+  }
+  .theme_neko .coach25_split {
+    margin-top: 32px;
+  }
+  .theme_neko .coach25_faces li {
+    width: 80px;
+    height: 80px;
+  }
+  .theme_neko .coach25_half h3 {
+    font-size: 30px;
+  }
+  .theme_neko .coach25_text {
+    font-size: 16px;
+  }
+  .theme_neko .coach25_plus {
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+  }
+  .theme_neko .fee25_lead {
+    font-size: 16px;
+  }
+  .theme_neko .fee25_receipt {
+    padding: 24px 20px 36px;
+    transform: rotate(-1deg);
+  }
+  .theme_neko .fee25_lines span {
+    font-size: 16px;
+  }
+  .theme_neko .fee25_lines b {
+    font-size: 18px;
+  }
+  .theme_neko .fee25_total span {
+    font-size: 16px;
+  }
+  .theme_neko .fee25_total b {
+    font-size: 34px;
+  }
+  .theme_neko .fee25_stamp {
+    top: -28px;
+    right: -6px;
+    width: 76px;
+    height: 76px;
+    font-size: 15px;
+  }
+
+  .theme_neko #faq section h3 {
+    font-size: 24px;
+  }
+  .theme_neko #support .support_container h2 {
+    padding-top: 32px;
+  }
+}
+
+/* ===== 11/10 第 1 輪審查修正 ===== */
+
+/* 頂部常駐報名列（取代原本的跑馬燈） */
+.theme_neko #marquee.topbar25 {
+  justify-content: center;
+  gap: 20px;
+  min-height: 64px;
+  padding: 10px 24px;
+}
+.theme_neko .topbar25_text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 14px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.theme_neko .topbar25_text b {
+  color: var(--neko-gold);
+  font-weight: 900;
+}
+.theme_neko .topbar25_text span {
+  font-weight: 500;
+}
+.theme_neko .topbar25 .neko_btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* 鍵盤焦點 */
+.theme_neko a:focus-visible,
+.theme_neko summary:focus-visible,
+.theme_neko button:focus-visible {
+  outline: 3px solid var(--neko-teal);
+  outline-offset: 3px;
+}
+
+/* 內文改 500，讓 <b> 和標題凸出來 */
+.theme_neko .hero25_lead,
+.theme_neko .about25_lead,
+.theme_neko .stuck25_note,
+.theme_neko .base25_lead,
+.theme_neko .base25_facts span,
+.theme_neko .skills25_lead,
+.theme_neko .skills25_hint,
+.theme_neko .skills25_step > p,
+.theme_neko .tl25_note,
+.theme_neko .tl25_range,
+.theme_neko .persona25_card p,
+.theme_neko .persona25_more,
+.theme_neko .coach25_text,
+.theme_neko .fee25_lead,
+.theme_neko .results25_note,
+.theme_neko .apply25_lead,
+.theme_neko .apply25_col li,
+.theme_neko .cta25_lead,
+.theme_neko .neko_cta_note,
+.theme_neko .faq25_hint,
+.theme_neko #faq .question_item_A,
+.theme_neko #faq .question_item_A li {
+  font-weight: 500;
+}
+.theme_neko .neko_nowrap {
+  font-weight: inherit;
+}
+
+/* 彩色底上的 kicker 加深，對比 4.5:1 以上 */
+.theme_neko #stuck25 .neko_kicker,
+.theme_neko #skills25 .neko_kicker,
+.theme_neko #timeline25 .neko_kicker,
+.theme_neko #cta25 .neko_kicker {
+  color: #0f6466;
+}
+
+/* 按鈕旁的說明小字 */
+.theme_neko .neko_cta_note {
+  margin-top: 14px;
+  color: var(--neko-ink-2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.theme_neko .neko_cta_note.is-center {
+  max-width: 640px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* 教練成績：講清楚是誰的成績 */
+.theme_neko .results25_note {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.theme_neko .results25_role.is-staff {
+  border: 2px solid var(--neko-ink);
+  background-color: #fff;
+  color: var(--neko-ink);
+}
+
+/* 還沒有題目 */
+.theme_neko .persona25_more {
+  margin-top: 28px;
+  padding: 16px 22px;
+  border: 3px dashed var(--neko-teal);
+  border-radius: 16px;
+  background-color: #fff;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.theme_neko .persona25_more b {
+  color: var(--neko-ink);
+  font-weight: 900;
+}
+
+/* 技能：工具名字的說明 */
+.theme_neko .skills25_hint {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--neko-orange);
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: var(--neko-ink-2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 時程旁的報名按鈕 */
+.theme_neko .tl25_cta {
+  margin-top: 28px;
+}
+
+/* 關於培訓：教練帶放最前面 */
+.theme_neko #training {
+  padding-top: 0;
+  border-top: 0;
+}
+.theme_neko #training .coach25 {
+  margin-top: 0;
+}
+.theme_neko #training .coach_hint {
+  align-self: flex-start;
+  margin: 6px 0 0 12%;
+  color: var(--neko-ink-2);
+  font-size: 15px;
+  font-weight: 500;
+}
+.theme_neko .coach_hint .is-mobile {
+  display: none;
+}
+/* 選中的橘框用 box-shadow 畫在照片和名牌底下，不會劃過頭頂和名牌 */
+.theme_neko #training .coach_card.active {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--neko-cream-2), 0 0 0 7px var(--neko-orange-ink);
+}
+.theme_neko .coach_dots {
+  position: static;
+  width: 100%;
+  margin-top: 18px;
+  text-align: center;
+}
+.theme_neko .coach_dots .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--neko-ink-2);
+  opacity: 0.35;
+}
+.theme_neko .coach_dots .swiper-pagination-bullet-active {
+  width: 26px;
+  border-radius: 5px;
+  background-color: var(--neko-orange-ink);
+  opacity: 1;
+}
+@media (min-width: 1229px) {
+  .theme_neko .coach_dots {
+    display: none;
+  }
+}
+
+/* 費用 */
+.theme_neko .fee25_lead + .fee25_lead {
+  margin-top: 12px;
+}
+
+/* 報名條件 */
+.theme_neko #training .apply25 {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 56px;
+  margin-top: 104px;
+}
+.theme_neko .apply25_lead {
+  margin-top: 16px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.theme_neko .apply25_art {
+  max-width: 320px;
+  margin: 28px 0 0;
+  padding: 14px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 var(--neko-teal);
+}
+.theme_neko .apply25_art img {
+  width: 100%;
+  border-radius: 12px;
+}
+.theme_neko .apply25_cols {
+  display: grid;
+  gap: 28px;
+}
+.theme_neko .apply25_col {
+  padding: 24px 28px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 var(--neko-ink);
+}
+.theme_neko .apply25_col.is-no {
+  border-style: dashed;
+  background-color: var(--neko-cream);
+  box-shadow: none;
+}
+.theme_neko .apply25_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px 4px 4px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.theme_neko .apply25_badge span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko .is-must .apply25_badge {
+  background-color: var(--neko-teal);
+  color: #fff;
+}
+.theme_neko .is-must .apply25_badge span {
+  color: var(--neko-teal);
+}
+.theme_neko .is-no .apply25_badge {
+  border: 2px solid var(--neko-ink-2);
+  color: var(--neko-ink);
+}
+.theme_neko .is-no .apply25_badge span {
+  color: var(--neko-ink-2);
+}
+.theme_neko .apply25_col ul {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0 0;
+  padding: 0;
+}
+.theme_neko .apply25_col li {
+  list-style: none;
+  color: var(--neko-ink-2);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.theme_neko .apply25_col li b {
+  display: block;
+  color: var(--neko-ink);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.theme_neko .button_go_container {
+  margin-top: 64px;
+}
+
+/* 常見問題：分類捷徑＋點了才展開 */
+.theme_neko #faq .faq_container {
+  gap: 48px;
+  padding-top: 112px;
+}
+.theme_neko .faq25_hint {
+  margin-top: 10px;
+  color: var(--neko-ink-2);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.theme_neko .faq25_nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 0;
+}
+.theme_neko #faq .faq25_nav li {
+  list-style: none;
+}
+.theme_neko #faq .faq25_nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid var(--neko-ink);
+  border-radius: 999px;
+  background-color: #fff;
+  box-shadow: 3px 3px 0 var(--neko-ink);
+  color: var(--neko-ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.theme_neko #faq .faq25_nav a:hover {
+  background-color: var(--neko-tag-bg);
+  color: var(--neko-ink);
+}
+.theme_neko #faq section {
+  scroll-margin-top: 84px;
+}
+.theme_neko #faq .question_item {
+  padding: 16px 20px;
+}
+.theme_neko #faq details {
+  flex: 1;
+  min-width: 0;
+}
+.theme_neko #faq summary.question_item_Q {
+  display: block;
+  position: relative;
+  min-height: 30px;
+  padding-right: 44px;
+  cursor: pointer;
+  list-style: none;
+  line-height: 1.6;
+}
+.theme_neko #faq summary.question_item_Q::-webkit-details-marker {
+  display: none;
+}
+.theme_neko #faq summary.question_item_Q::after {
+  content: "＋";
+  position: absolute;
+  top: -2px;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--neko-ink);
+  border-radius: 50%;
+  color: var(--neko-ink);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+}
+.theme_neko #faq details[open] > summary.question_item_Q::after {
+  content: "－";
+  background-color: var(--neko-tag-bg);
+}
+.theme_neko #faq .question_item_A {
+  line-height: 1.7;
+}
+.theme_neko #faq .question_item_A::before {
+  color: var(--neko-tag-text);
+}
+
+/* 收尾報名區 */
+.theme_neko #cta25 {
+  padding: 88px 0;
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko .cta25 {
+  text-align: center;
+}
+.theme_neko .cta25_lead {
+  max-width: 680px;
+  margin: 16px auto 28px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.theme_neko .cta25_lead b {
+  color: var(--neko-ink);
+  font-weight: 900;
+}
+.theme_neko .cta25_btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* 主辦、協辦單位：改成會換行，不用橫滑 */
+.theme_neko #support .support_container h2 {
+  width: 100%;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.theme_neko #support .support_container .support_card_container_outside {
+  overflow: visible;
+}
+.theme_neko #support .support_container .support_card_container {
+  flex-wrap: wrap;
+  width: auto;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 平板 */
+@media (max-width: 1023px) {
+  .theme_neko #training .apply25 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .theme_neko #marquee.topbar25 {
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+  }
+  .theme_neko .topbar25_text {
+    flex-direction: column;
+    gap: 0;
+    font-size: 13px;
+  }
+  .theme_neko .topbar25_text b {
+    font-size: 14px;
+  }
+  .theme_neko .hero25_link.is-desktop {
+    display: none;
+  }
+  .theme_neko .results25_note {
+    font-size: 15px;
+  }
+  .theme_neko .persona25_more {
+    font-size: 16px;
+  }
+  .theme_neko .container_sm,
+  .theme_neko .container_xs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .theme_neko #training .coach h3,
+  .theme_neko #training .coach_hint {
+    margin-left: 20px;
+  }
+  .theme_neko .coach_hint .is-desktop {
+    display: none;
+  }
+  .theme_neko .coach_hint .is-mobile {
+    display: inline;
+  }
+  .theme_neko #training .coach_card_container_inside {
+    padding-left: 0;
+  }
+  .theme_neko #training .coach_swiper {
+    padding: 0 20px;
+  }
+  .theme_neko #training .coach_card {
+    width: auto;
+  }
+  .theme_neko #training .coach_card img {
+    width: 66%;
+  }
+  .theme_neko #training .apply25 {
+    margin-top: 72px;
+  }
+  .theme_neko .apply25_lead {
+    font-size: 16px;
+  }
+  .theme_neko .apply25_art {
+    max-width: 240px;
+  }
+  .theme_neko .apply25_col {
+    padding: 20px 18px;
+  }
+  .theme_neko .apply25_col li b {
+    font-size: 18px;
+  }
+  .theme_neko .button_go_container {
+    margin-top: 48px;
+  }
+  .theme_neko #faq .faq_container {
+    padding-top: 80px;
+    gap: 40px;
+  }
+  .theme_neko #faq .question_item {
+    padding: 16px 0;
+  }
+  .theme_neko #faq .question_item img {
+    width: 20px;
+    margin-right: 12px;
+  }
+  .theme_neko #cta25 {
+    padding: 64px 0;
+  }
+  .theme_neko .cta25_lead {
+    font-size: 16px;
+  }
+  .theme_neko #support .support_container h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .theme_neko #support .support_container .support_card_container {
+    gap: 16px;
+    padding: 0 20px;
+  }
+  .theme_neko #support .support_container .support_card_container .support_card_item {
+    width: calc(50% - 8px);
+  }
+  .theme_neko #support .support_container .support_card_container .support_card_item .support_img {
+    width: 100%;
+  }
+}
+
+/* 11/10 第 3 輪審查修正 */
+/* 首屏：截止日那顆標籤做成實心，最急的先看到 */
+.theme_neko .hero25_chips li.is-hot {
+  border-color: var(--neko-ink);
+  background-color: var(--neko-orange);
+  color: var(--neko-ink);
+  font-weight: 900;
+}
+
+/* 教練成績搬到「兩種教練」後面，自己一條深色帶（第 4 輪：兩種教練改淺底） */
+.theme_neko #training #results25 {
+  padding: 80px 0;
+  border-top: 3px solid var(--neko-ink);
+  border-bottom: 3px solid var(--neko-ink);
+}
+.theme_neko #training #results25 .neko_wrap {
+  margin-top: 0;
+}
+
+/* 費用：另外要準備的生活費 */
+.theme_neko .fee25_more {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border: 2px dashed var(--neko-ink-2);
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.theme_neko .fee25_more b {
+  display: block;
+  font-weight: 900;
+}
+.theme_neko .fee25_more a {
+  color: var(--neko-teal);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 常見問題：整列都能點，＋號垂直置中 */
+.theme_neko #faq .question_item {
+  padding: 0;
+}
+.theme_neko #faq summary.question_item_Q {
+  min-height: 0;
+  padding: 16px 52px 16px 4px;
+}
+.theme_neko #faq summary.question_item_Q::after {
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+}
+.theme_neko #faq .question_item_A {
+  padding: 0 4px 20px;
+}
+.theme_neko #faq details[id] {
+  scroll-margin-top: 96px;
+}
+
+/* 電腦版：教練、費用、報名條件、常見問題都對齊同一條左緣 */
+@media (min-width: 768px) {
+  .theme_neko #training .neko_wrap {
+    max-width: 1168px;
+    padding: 0 24px;
+    margin: 88px auto 0;
+  }
+  .theme_neko #training .coach25 .neko_wrap,
+  .theme_neko #training #results25 .neko_wrap {
+    margin-top: 0;
+  }
+  .theme_neko #training .coach_container {
+    max-width: 1168px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .theme_neko #training .coach h3,
+  .theme_neko #training .coach_hint {
+    margin-left: 8px;
+  }
+  /* 左邊和下面留一點空間，選中的外框才不會被切掉 */
+  .theme_neko #training .coach_card_container_inside {
+    padding-left: 8px;
+  }
+  .theme_neko #training .coach_swiper {
+    padding-bottom: 10px;
+  }
+  .theme_neko #training .coach_description.container_sm {
+    max-width: none;
+    padding: 0 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .theme_neko #faq .faq_container {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 64px;
+    row-gap: 48px;
+    max-width: 1168px;
+  }
+  .theme_neko #faq .faq25_head {
+    position: sticky;
+    top: 96px;
+    grid-column: 1;
+    grid-row: 1 / span 8;
+    align-self: start;
+  }
+  .theme_neko #faq .faq_container > section {
+    grid-column: 2;
+  }
+  .theme_neko #faq .faq25_nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 手機版：圖縮小，重點清單往上 */
+@media (max-width: 767px) {
+  .theme_neko .persona25_img {
+    max-width: 160px;
+  }
+  .theme_neko .stuck25_art {
+    max-width: 200px;
+  }
+  .theme_neko .apply25_art {
+    display: none;
+  }
+  /* 頂部報名列一直都在，時程這裡不再放一顆按鈕把時程往下推 */
+  .theme_neko .tl25_cta {
+    display: none;
+  }
+}
+
+/* 11/10 第 4 輪審查修正 */
+/* 首屏和「你是哪一種」分開：跟其他區塊一樣有上框線、換底色 */
+.theme_neko #hero25 {
+  padding-bottom: 64px;
+}
+.theme_neko #about_rocket {
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-cream-2);
+}
+
+/* 兩種教練：改淺底＋白卡，深色只留給下面的教練成績 */
+.theme_neko #training .coach25 {
+  border-bottom: 0;
+  background-color: var(--neko-cream-2);
+  color: var(--neko-ink);
+}
+.theme_neko #training .coach25 .neko_kicker {
+  color: var(--neko-teal);
+}
+.theme_neko #training .coach25 .neko_h2,
+.theme_neko #training .coach25_half h3 {
+  color: var(--neko-ink);
+}
+.theme_neko #training .coach25_half {
+  padding: 28px 28px 24px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 var(--neko-ink);
+}
+.theme_neko #training .coach25_text {
+  color: var(--neko-ink-2);
+}
+.theme_neko #training .coach25_tags li {
+  border-color: var(--neko-ink);
+  color: var(--neko-ink);
+}
+.theme_neko #training .coach25_who {
+  border-top-color: var(--neko-line);
+  color: var(--neko-orange-ink);
+}
+.theme_neko #training .coach25_plus {
+  border-color: var(--neko-orange-ink);
+  color: var(--neko-orange-ink);
+}
+
+/* 教練成績：第 03 列是文字（設計師 → 工程師），字小一點；整條帶子收短 */
+.theme_neko .results25_row {
+  padding: 28px 0;
+}
+.theme_neko .results25_big {
+  font-size: 96px;
+}
+.theme_neko .results25_big.is-text {
+  font-size: 64px;
+  letter-spacing: 0;
+}
+.theme_neko .results25_big.is-text span {
+  margin: 0 12px;
+}
+
+/* 教練卡：鍵盤移過去時，名牌外面出現青色虛線框（跟選中的橘色實線框分開） */
+.theme_neko #training .coach_card:focus-visible {
+  outline: none;
+}
+.theme_neko #training .coach_card:focus-visible .coach_name {
+  outline: 3px dashed var(--neko-teal);
+  outline-offset: 4px;
+}
+
+/* 常見問題：Q／A 換行時對齊文字，不從字母底下開始 */
+.theme_neko #faq summary.question_item_Q {
+  padding-left: 40px;
+}
+.theme_neko #faq summary.question_item_Q::before {
+  position: absolute;
+  top: 16px;
+  left: 4px;
+}
+.theme_neko #faq .question_item_A {
+  position: relative;
+  padding-left: 40px;
+}
+.theme_neko #faq .question_item_A::before {
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+/* 左欄捷徑：目前看到的那一類，實心底＋「▸」（只有電腦版左欄會跟著捲動標示） */
+@media (min-width: 1024px) {
+  .theme_neko #faq .faq25_nav a.is-current {
+    background-color: var(--neko-ink);
+    box-shadow: 3px 3px 0 var(--neko-orange);
+    color: #fff;
+  }
+  .theme_neko #faq .faq25_nav a.is-current::before {
+    content: "▸ ";
+  }
+}
+
+/* 電腦版：大報名按鈕跟其他區塊同寬、同一條左緣 */
+@media (min-width: 768px) {
+  .theme_neko .button_go_container.container_sm {
+    max-width: 1168px;
+    padding: 0 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .theme_neko .results25_big {
+    font-size: 80px;
+  }
+  .theme_neko .results25_big.is-text {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme_neko #hero25 {
+    padding-bottom: 48px;
+  }
+  .theme_neko #training .coach25_half {
+    padding: 22px 20px 20px;
+  }
+  .theme_neko .results25_row {
+    padding: 22px 0;
+  }
+  .theme_neko .results25_big {
+    font-size: 56px;
+  }
+  .theme_neko .results25_big.is-text {
+    font-size: 40px;
+  }
+  .theme_neko .results25_big.is-text span {
+    margin: 0 8px;
+  }
+}
+
+/* 11/10 第 5 輪審查修正 */
+/* 兩種教練卡下方的「誰來帶」：橘字換成較深的標籤字色，白底上更好讀 */
+.theme_neko #training .coach25_who {
+  color: var(--neko-tag-text);
+}
+/* 成績卡：卡斯伯換成真人照，照片從上緣裁 */
+.theme_neko .results25_ava.is-photo {
+  object-position: center top;
+  background-color: #fff;
+}
+/* 報名條件下方的生活費提醒：輕量小字，不做成第三張卡 */
+.theme_neko .apply25_note {
+  display: flex;
+  align-items: baseline;
+  margin: -8px 0 0;
+  padding: 0 4px;
+  color: var(--neko-ink-2);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.theme_neko .apply25_note b {
+  flex-shrink: 0;
+  margin-right: 8px;
+  padding: 0 10px;
+  border: 2px solid var(--neko-ink-2);
+  border-radius: 999px;
+  color: var(--neko-ink);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+/* 基地地址的「開地圖」連結 */
+.theme_neko .base25_facts a {
+  display: inline-block;
+  color: var(--neko-teal);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+/* 費用收據：小字裡的不斷行 span 跟小字同樣式 */
+.theme_neko .fee25_lines small span {
+  color: inherit;
+  font: inherit;
+}
+/* 費用收據：AI 額度兩段金額＋加總 */
+.theme_neko .fee25_lines b.is-ai {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: right;
+}
+/* 收據最後的總計：每個月實際要準備的錢，是收據上最大的數字 */
+.theme_neko .fee25_all {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 2px solid var(--neko-ink);
+  border-radius: 14px;
+  background-color: var(--neko-cream-2);
+}
+.theme_neko .fee25_all_head {
+  color: var(--neko-ink);
+  font-size: 16px;
+  font-weight: 900;
+}
+.theme_neko .fee25_all p:not(.fee25_all_head):not(.fee25_all_note) {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+.theme_neko .fee25_all p:not(.fee25_all_note) span {
+  color: var(--neko-ink);
+  font-size: 18px;
+  font-weight: 900;
+}
+.theme_neko .fee25_all p:not(.fee25_all_note) b {
+  color: var(--neko-teal);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.theme_neko .fee25_all_note span {
+  color: inherit;
+  font: inherit;
+}
+.theme_neko .fee25_all_note {
+  margin-top: 12px;
+  color: var(--neko-ink-2);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.theme_neko .fee25_all p:not(.fee25_all_note) span,
+.theme_neko .fee25_all p:not(.fee25_all_note) b {
+  white-space: nowrap;
+}
+/* 手機：月份在上、金額在下，320px 寬也不會斷行 */
+@media (max-width: 767px) {
+  .theme_neko .fee25_all p:not(.fee25_all_head):not(.fee25_all_note) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 10px;
+  }
+  .theme_neko .fee25_all p:not(.fee25_all_note) span {
+    font-size: 16px;
+  }
+  .theme_neko .fee25_all p:not(.fee25_all_note) b {
+    font-size: 28px;
+  }
+}
+/* 首屏右半的火箭軌道：外圈慢慢轉、小圓點繞圈、logo 上下浮、星星閃、標籤輕晃 */
+.theme_neko .hero25_orbit {
+  isolation: isolate;
+  border-color: transparent;
+}
+.theme_neko .hero25_orbit::before {
+  z-index: 0;
+}
+.theme_neko .hero25_orbit::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: 0;
+  border: 3px dashed var(--neko-teal);
+  border-radius: 50%;
+  animation: neko25-spin 48s linear infinite;
+}
+.theme_neko .hero25_orbit > * {
+  z-index: 1;
+}
+.theme_neko .hero25_sat {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  animation: neko25-spin 30s linear infinite;
+  pointer-events: none;
+}
+.theme_neko .hero25_sat::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border: 3px solid var(--neko-ink);
+  border-radius: 50%;
+  background-color: var(--neko-orange);
+}
+.theme_neko .hero25_orbit img {
+  animation: neko25-float 3.6s ease-in-out infinite alternate;
+}
+.theme_neko .hero25_star {
+  animation: neko25-twinkle 2.4s ease-in-out infinite alternate;
+}
+.theme_neko .hero25_star.s2 {
+  animation-delay: -0.8s;
+}
+.theme_neko .hero25_star.s3 {
+  animation-delay: -1.6s;
+}
+.theme_neko .hero25_tag {
+  animation: neko25-bob 4.2s ease-in-out infinite alternate;
+}
+.theme_neko .hero25_tag.t2 {
+  animation-delay: -2.1s;
+}
+@keyframes neko25-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes neko25-float {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@keyframes neko25-twinkle {
+  from {
+    opacity: 0.6;
+    transform: scale(0.85) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1) rotate(15deg);
+  }
+}
+/* 旋轉中的外圈和小圓點，斜角會超出畫面寬度；在首屏這層裁掉，頁面才不會左右晃 */
+.theme_neko #hero25 {
+  overflow-x: clip;
+}
+/* 首屏捲出畫面時暫停（all.js 加 .is-paused） */
+.theme_neko .hero25_orbit.is-paused::after,
+.theme_neko .hero25_orbit.is-paused .hero25_sat,
+.theme_neko .hero25_orbit.is-paused img,
+.theme_neko .hero25_orbit.is-paused .hero25_star,
+.theme_neko .hero25_orbit.is-paused .hero25_tag {
+  animation-play-state: paused;
+}
+/* 常見問題：手機、平板每一類右上角有「回分類 ↑」（電腦版左欄捷徑一直在，不用） */
+.theme_neko #faq section {
+  position: relative;
+}
+.theme_neko #faq .faq25_head {
+  scroll-margin-top: 84px;
+}
+.theme_neko #faq .faq25_back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 10px 0 12px 16px;
+  color: var(--neko-teal);
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (min-width: 1024px) {
+  .theme_neko #faq .faq25_back {
+    display: none;
+  }
+}
+@keyframes neko25-bob {
+  from {
+    transform: translateY(4px);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme_neko .hero25_orbit::after,
+  .theme_neko .hero25_sat,
+  .theme_neko .hero25_orbit img,
+  .theme_neko .hero25_star,
+  .theme_neko .hero25_tag {
+    animation: none;
+  }
+}
+/* 手機：收據的 AI 額度那列改成上下排，金額不擠出卡片 */
+@media (max-width: 767px) {
+  .theme_neko .fee25_lines li.is-ai-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .theme_neko .fee25_lines b.is-ai {
+    text-align: left;
+  }
+}
+/* 手機、平板：兩種教練中間的「＋」置中 */
+@media (max-width: 1023px) {
+  .theme_neko .coach25_plus {
+    justify-self: center;
+  }
+}
+
+/* 11/30 線上說明會：首屏下面一塊，左邊文字、右邊直播影片 */
+.theme_neko #live25 {
+  padding: 72px 0;
+  border-top: 3px solid var(--neko-ink);
+  background-color: var(--neko-teal-soft);
+}
+.theme_neko .live25 {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 48px;
+  align-items: center;
+}
+.theme_neko .live25_lead {
+  margin: 16px 0 24px;
+  color: var(--neko-ink-2);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.theme_neko .live25_video {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 3px solid var(--neko-ink);
+  border-radius: 20px;
+  background-color: var(--neko-ink);
+  box-shadow: 8px 8px 0 var(--neko-ink);
+}
+.theme_neko .live25_video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* 時程表和常見問題裡的直播連結 */
+.theme_neko .tl25_note a,
+.theme_neko #faq .faq25_live {
+  color: var(--neko-teal);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+@media (max-width: 1023px) {
+  .theme_neko #live25 {
+    padding: 56px 0;
+  }
+  .theme_neko .live25 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+/* === theme_neko end === */
